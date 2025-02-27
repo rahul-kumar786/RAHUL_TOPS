@@ -1,0 +1,652 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.26100}\viewkind4\uc1 
+\pard\sl240\slmult1\ul\b\f0\fs32\lang9 Lab Assignment\par
+\ulnone\b0\fs22\par
+\b\fs24\lang1033 1. \f1\lang9\bullet  Task: Style the contact form (created in the HTML Forms lab) using external CSS.\par
+\f0\lang1033   \f1\lang9 Thefollowing should be implemented:\par
+\b0\f0\fs22\lang1033    \b\f1\lang9\bullet  Change the background color of the form.\par
+\f0\lang1033    \f1\lang9\bullet  Add padding and margins to form fields.\par
+\f0\lang1033    \f1\lang9\bullet  Style the submit button with a hover effect.\par
+\f0\lang1033    \f1\lang9\bullet  Use class selectors for styling common elements and ID selectors for\f0\lang1033  \f1\lang9\par
+\f0\lang1033        \f1\lang9 uniqueelements\f0\lang1033 ?\par
+\fs24 Ans =>\fs22\lang9\par
+\b0 <!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Contact Form</title>\par
+    <link rel="stylesheet" href="styles.css">\par
+</head>\par
+<body>\par
+    <div class="contact-form-container">\par
+        <form id="contact-form">\par
+            <h2>Contact Us</h2>\par
+            <div class="form-group">\par
+                <label for="name">Name:</label>\par
+                <input type="text" id="name" name="name" required>\par
+            </div>\par
+            <div class="form-group">\par
+                <label for="email">Email:</label>\par
+                <input type="email" id="email" name="email" required>\par
+            </div>\par
+            <div class="form-group">\par
+                <label for="message">Message:</label>\par
+                <textarea id="message" name="message" required></textarea>\par
+            </div>\par
+            <div class="form-group">\par
+                <button type="submit" id="submit-button">Submit</button>\par
+            </div>\par
+        </form>\par
+    </div>\par
+</body>\par
+</html>\par
+\par
+\b\fs24 CSS :--\b0\fs22\par
+\par
+/* Style for the whole form container */\par
+.contact-form-container \{\par
+    width: 50%;\par
+    margin: 0 auto;\par
+    padding: 20px;\par
+    background-color: #f4f4f4; /* Change the background color */\par
+    border-radius: 8px;\par
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\par
+\}\par
+\par
+/* Form title style */\par
+h2 \{\par
+    text-align: center;\par
+    color: #333;\par
+\}\par
+\par
+/* General form field styling (common elements) */\par
+.form-group \{\par
+    margin-bottom: 15px; /* Add margin between fields */\par
+\}\par
+\par
+/* Input fields styling */\par
+input[type="text"], input[type="email"], textarea \{\par
+    width: 100%;\par
+    padding: 10px;\par
+    margin: 5px 0; /* Add margin to form fields */\par
+    border: 1px solid #ccc;\par
+    border-radius: 4px;\par
+    font-size: 16px;\par
+\}\par
+\par
+/* Style for textarea */\par
+textarea \{\par
+    height: 150px;\par
+    resize: vertical;\par
+\}\par
+\par
+/* Submit button styling */\par
+#submit-button \{\par
+    width: 100%;\par
+    padding: 10px;\par
+    background-color: #4CAF50; /* Green button */\par
+    color: white;\par
+    font-size: 16px;\par
+    border: none;\par
+    border-radius: 4px;\par
+    cursor: pointer;\par
+    transition: background-color 0.3s ease;\par
+\}\par
+\par
+/* Submit button hover effect */\par
+#submit-button:hover \{\par
+    background-color: #45a049; /* Darker green on hover */\par
+\}\par
+\par
+/* Unique element styling using ID (submit button) */\par
+#submit-button:focus \{\par
+    outline: none; /* Remove outline when focused */\par
+\}\par
+\par
+/* Responsive design for smaller screens */\par
+@media screen and (max-width: 768px) \{\par
+    .contact-form-container \{\par
+        width: 80%;\par
+    \}\par
+\}\par
+\par
+\b\f1\fs28\bullet  \ul CSS Box Model\b0\f0\fs22\par
+\ulnone\par
+\b\fs24\lang1033 2. \f1\lang9\bullet  Task: Create a profile card layout using the box model. The profile card\par
+\f0\lang1033        \f1\lang9 shouldinclude:\par
+\b0\f0\fs22\lang1033         \b\f1\lang9\bullet  A profile picture.\par
+\f0\lang1033         \f1\lang9\bullet  The user\rquote s name and bio.\par
+\f0\lang1033         \f1\lang9\bullet  A button to "Follow" the user.\par
+\f0\lang1033            \f1\lang9 Additional Requirements:\par
+\f0\lang1033         \f1\lang9\bullet  Add padding and borders to the elements.\par
+\f0\lang1033         \f1\lang9\bullet  Ensure the layout is clean and centered on the page using CSS margins.\par
+\f0\lang1033         \f1\lang9\bullet  Use the box-sizingproperty to demonstrate both content-boxand border-boxon\par
+\f0\lang1033           \f1\lang9 different elements\f0\lang1033 ?\par
+\fs24 Ans =>\par
+\b0\fs22 <!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Profile Card</title>\par
+    <style>\par
+       \par
+* \{\par
+    box-sizing: border-box; \par
+    margin: 0;\par
+    padding: 0;\par
+\}\par
+\par
+\par
+.profile-card \{\par
+    width: 300px;\par
+    padding: 20px;\par
+    margin: 50px auto; \par
+    border: 2px solid #ccc; \par
+    border-radius: 10px; \par
+    background-color: #f4f4f4;\par
+\}\par
+\par
+\par
+.profile-pic \{\par
+    width: 100%;\par
+    height: auto;\par
+    border-radius: 50%; \par
+    margin-bottom: 15px;\par
+    box-sizing: content-box; \par
+\}\par
+\par
+\par
+.user-name \{\par
+    text-align: center;\par
+    font-size: 22px;\par
+    font-weight: bold;\par
+    margin-bottom: 10px;\par
+\}\par
+\par
+\par
+.user-bio \{\par
+    text-align: center;\par
+    font-size: 16px;\par
+    color: #666;\par
+    margin-bottom: 20px;\par
+\}\par
+\par
+\par
+.follow-btn \{\par
+    width: 100%;\par
+    padding: 10px;\par
+    background-color: #4CAF50; \par
+    color: white;\par
+    font-size: 16px;\par
+    border: 2px solid #4CAF50;\par
+    border-radius: 5px;\par
+    cursor: pointer;\par
+    transition: background-color 0.3s ease;\par
+\}\par
+\par
+\par
+.follow-btn:hover \{\par
+    background-color: #45a049; \par
+\}\par
+\par
+\par
+.follow-btn \{\par
+    box-sizing: border-box; \par
+\}\par
+\par
+    </style>\par
+</head>\par
+<body>\par
+    <div class="profile-card">\par
+        <img src="{{\field{\*\fldinst{HYPERLINK https://static.vecteezy.com/system/resources/previews/008/296/267/non_2x/colorful-swirl-logo-design-concept-illustration-vector.jpg }}{\fldrslt{https://static.vecteezy.com/system/resources/previews/008/296/267/non_2x/colorful-swirl-logo-design-concept-illustration-vector.jpg\ul0\cf0}}}}\f0\fs22 " alt="Profile Picture" class="profile-pic">\par
+        <h2 class="user-name">John Doe</h2>\par
+        <p class="user-bio">A passionate developer who loves coding and sharing knowledge.</p>\par
+        <button class="follow-btn">Follow</button>\par
+    </div>\par
+</body>\par
+</html>\b\fs24\par
+\fs22\lang9\par
+\f1\fs28\bullet  \ul CSS Flexbox\ulnone\par
+\f0\fs22\par
+\fs24 3. \f1\bullet  Task: Create a simple webpage layout using Flexbox. The layout should include:\fs22\par
+\f0\lang1033          \f1\lang9\bullet  A header.\par
+\f0\lang1033          \f1\lang9\bullet  A sidebar on the left.\par
+\f0\lang1033          \f1\lang9\bullet  A main content area in the center.\par
+\f0\lang1033          \f1\lang9\bullet  A footer.\par
+\f0\lang1033      \f1\lang9 Additional Requirements:\par
+\f0\lang1033         \f1\lang9\bullet  Use Flexbox to position and align the elements.\par
+\f0\lang1033         \f1\lang9\bullet  Apply different justify-contentand align-itemsproperties to observe theireffects.\par
+\f0\lang1033         \f1\lang9\bullet  Ensure the layout is responsive, adjusting for smaller screens.\par
+\f0\fs24\lang1033 Ans =>\fs22\lang9\par
+\b0 <!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Flexbox Layout</title>\par
+    <!-- <link rel="stylesheet" href="styles.css"> -->\par
+     <style>\par
+        /* Basic reset for margins and paddings */\par
+* \{\par
+    margin: 0;\par
+    padding: 0;\par
+    box-sizing: border-box;\par
+\}\par
+\par
+/* Set up Flexbox container */\par
+.container \{\par
+    display: flex;\par
+    flex-direction: column; /* Arrange header, main-content, and footer vertically */\par
+    height: 100vh;\par
+\}\par
+\par
+/* Header styling */\par
+.header \{\par
+    background-color: #4CAF50;\par
+    color: white;\par
+    padding: 20px;\par
+    text-align: center;\par
+    flex: 0 1 60px; /* Fixed height for the header */\par
+\}\par
+\par
+/* Main content area: Flexbox row layout with sidebar and content */\par
+.main-content \{\par
+    display: flex;\par
+    justify-content: space-between; /* Distribute space between sidebar and content */\par
+    flex: 1; /* Takes up remaining space */\par
+\}\par
+\par
+/* Sidebar styling */\par
+.sidebar \{\par
+    background-color: #f4f4f4;\par
+    width: 250px;\par
+    padding: 20px;\par
+\}\par
+\par
+/* Main content section styling */\par
+.content \{\par
+    background-color: #f9f9f9;\par
+    flex: 1; /* Takes up remaining space in the main content area */\par
+    padding: 20px;\par
+\}\par
+\par
+/* Footer styling */\par
+.footer \{\par
+    background-color: #333;\par
+    color: white;\par
+    text-align: center;\par
+    padding: 10px;\par
+\}\par
+\par
+/* Responsive design */\par
+@media screen and (max-width: 768px) \{\par
+    .main-content \{\par
+        flex-direction: column; /* Stack sidebar and content vertically */\par
+    \}\par
+\par
+    .sidebar \{\par
+        width: 100%; /* Sidebar takes up full width on small screens */\par
+    \}\par
+\par
+    .content \{\par
+        width: 100%; /* Content takes up full width on small screens */\par
+    \}\par
+\}\par
+\par
+     </style>\par
+</head>\par
+<body>\par
+    <div class="container">\par
+        <header class="header">\par
+            <h1>Website Header</h1>\par
+        </header>\par
+        <div class="main-content">\par
+            <aside class="sidebar">\par
+                <h2>Sidebar</h2>\par
+                <p>This is the sidebar content.</p>\par
+            </aside>\par
+            <section class="content">\par
+                <h2>Main Content</h2>\par
+                <p>This is the main content area. Here you can display articles, text, images, etc.</p>\par
+            </section>\par
+        </div>\par
+        <footer class="footer">\par
+            <p>Website Footer</p>\par
+        </footer>\par
+    </div>\par
+</body>\par
+</html>\par
+\par
+\b\f1\fs24\bullet  \ul\fs28 CSS Grid\fs24\par
+\ulnone\f0\par
+4. \f1\bullet  Task: Create a 3x3 grid of product cards using CSS Grid. Each card should contain:\par
+\f0\lang1033        \f1\lang9\bullet  A product image.\par
+\f0\lang1033        \f1\lang9\bullet  A product title.\par
+\f0\lang1033        \f1\lang9\bullet  A price.\par
+\f0\lang1033    \f1\lang9 Additional Requirements:\f0\lang1033 ---\f1\lang9\par
+\f0\lang1033        \f1\lang9\bullet  Use grid-template-columnsto create the grid layout.\par
+\f0\lang1033        \f1\lang9\bullet  Use grid-gapto add spacing between the grid items.\par
+\f0\lang1033        \f1\lang9\bullet  Apply hover effects to each card for better interactivity.\par
+\f0\lang1033 Ans =>\b0\par
+\fs22\lang9 <!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+  <meta charset="UTF-8">\par
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+  <title>CSS Grid Product Cards</title>\par
+  <link rel="stylesheet" href="styles.css">\par
+</head>\par
+<body>\par
+  <div class="container">\par
+    <div class="product-card">\par
+      <img src="https://via.placeholder.com/150" alt="Product 1">\par
+      <h3>Product 1</h3>\par
+      <p>$19.99</p>\par
+    </div>\par
+    <div class="product-card">\par
+      <img src="https://via.placeholder.com/150" alt="Product 2">\par
+      <h3>Product 2</h3>\par
+      <p>$24.99</p>\par
+    </div>\par
+    <div class="product-card">\par
+      <img src="https://via.placeholder.com/150" alt="Product 3">\par
+      <h3>Product 3</h3>\par
+      <p>$29.99</p>\par
+    </div>\par
+    <div class="product-card">\par
+      <img src="https://via.placeholder.com/150" alt="Product 4">\par
+      <h3>Product 4</h3>\par
+      <p>$15.99</p>\par
+    </div>\par
+    <div class="product-card">\par
+      <img src="https://via.placeholder.com/150" alt="Product 5">\par
+      <h3>Product 5</h3>\par
+      <p>$12.99</p>\par
+    </div>\par
+    <div class="product-card">\par
+      <img src="https://via.placeholder.com/150" alt="Product 6">\par
+      <h3>Product 6</h3>\par
+      <p>$18.99</p>\par
+    </div>\par
+    <div class="product-card">\par
+      <img src="https://via.placeholder.com/150" alt="Product 7">\par
+      <h3>Product 7</h3>\par
+      <p>$9.99</p>\par
+    </div>\par
+    <div class="product-card">\par
+      <img src="https://via.placeholder.com/150" alt="Product 8">\par
+      <h3>Product 8</h3>\par
+      <p>$22.99</p>\par
+    </div>\par
+    <div class="product-card">\par
+      <img src="https://via.placeholder.com/150" alt="Product 9">\par
+      <h3>Product 9</h3>\par
+      <p>$17.99</p>\par
+    </div>\par
+  </div>\par
+</body>\par
+</html>\par
+\par
+\b\fs28 css:---\par
+\b0\fs22 /* styles.css */\par
+\par
+* \{\par
+  margin: 0;\par
+  padding: 0;\par
+  box-sizing: border-box;\par
+\}\par
+\par
+body \{\par
+  font-family: Arial, sans-serif;\par
+  padding: 20px;\par
+  background-color: #f4f4f4;\par
+\}\par
+\par
+.container \{\par
+  display: grid;\par
+  grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */\par
+  grid-gap: 20px; /* Spacing between grid items */\par
+\}\par
+\par
+.product-card \{\par
+  background-color: #fff;\par
+  border: 1px solid #ddd;\par
+  border-radius: 8px;\par
+  overflow: hidden;\par
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\par
+  transition: transform 0.3s, box-shadow 0.3s;\par
+\}\par
+\par
+.product-card img \{\par
+  width: 100%;\par
+  height: auto;\par
+\}\par
+\par
+.product-card h3 \{\par
+  margin: 10px;\par
+  font-size: 18px;\par
+  color: #333;\par
+\}\par
+\par
+.product-card p \{\par
+  margin: 10px;\par
+  font-size: 16px;\par
+  color: #555;\par
+\}\par
+\par
+.product-card:hover \{\par
+  transform: translateY(-5px);\par
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);\par
+\}\par
+\par
+\b\f1\fs28\bullet  \ul Responsive Web Design with Media Queries\fs24\par
+\ulnone\b0\f0\fs22\par
+\b\fs24\lang1033 5. \f1\lang9\bullet  Task: Build a responsive webpage that includes:\par
+\f0\lang1033         \f1\lang9\bullet  A navigation bar.\par
+\f0\lang1033         \f1\lang9\bullet  A content section with two columns.\par
+\f0\lang1033         \f1\lang9\bullet  A footer.\par
+\f0\lang1033     \f1\lang9 Additional Requirements:\f0\lang1033 ---\f1\lang9\par
+\f0\lang1033        \f1\lang9\bullet  Use media queries to make the webpage responsive for mobile devices.\par
+\f0\lang1033        \f1\lang9\bullet  On smaller screens (below 768px), stack the columns vertically.\par
+\f0\lang1033        \f1\lang9\bullet  Adjust the font sizes and padding to improve readability on mobile.\par
+\f0\lang1033 Ans =>\par
+\b0\fs22\lang9 <!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+  <meta charset="UTF-8">\par
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+  <title>Responsive Webpage</title>\par
+  <link rel="stylesheet" href="styles.css">\par
+</head>\par
+<body>\par
+  <nav class="navbar">\par
+    <h1>My Website</h1>\par
+    <ul>\par
+      <li><a href="#">Home</a></li>\par
+      <li><a href="#">About</a></li>\par
+      <li><a href="#">Contact</a></li>\par
+    </ul>\par
+  </nav>\par
+  <div class="content">\par
+    <div class="column">\par
+      <h2>Column 1</h2>\par
+      <p>This is the first column content.</p>\par
+    </div>\par
+    <div class="column">\par
+      <h2>Column 2</h2>\par
+      <p>This is the second column content.</p>\par
+    </div>\par
+  </div>\par
+  <footer class="footer">\par
+    <p> 2025 My Website</p>\par
+  </footer>\par
+</body>\par
+</html>\par
+\par
+\b\fs24 css:---\b0\fs22\par
+\par
+* \{\par
+  margin: 0;\par
+  padding: 0;\par
+  box-sizing: border-box;\par
+\}\par
+\par
+body \{\par
+  font-family: Arial, sans-serif;\par
+  line-height: 1.6;\par
+  padding: 10px;\par
+\}\par
+\par
+\par
+.navbar \{\par
+  display: flex;\par
+  justify-content: space-between;\par
+  align-items: center;\par
+  background: #333;\par
+  color: white;\par
+  padding: 10px 20px;\par
+\}\par
+\par
+.navbar ul \{\par
+  list-style: none;\par
+  display: flex;\par
+\}\par
+\par
+.navbar ul li \{\par
+  margin: 0 10px;\par
+\}\par
+\par
+.navbar ul li a \{\par
+  color: white;\par
+  text-decoration: none;\par
+\}\par
+\par
+\par
+.content \{\par
+  display: flex;\par
+  gap: 20px;\par
+  margin: 20px 0;\par
+\}\par
+\par
+.column \{\par
+  flex: 1;\par
+  padding: 20px;\par
+  border: 1px solid #ddd;\par
+  border-radius: 5px;\par
+\}\par
+\par
+\par
+.footer \{\par
+  text-align: center;\par
+  padding: 10px 0;\par
+  background: #333;\par
+  color: white;\par
+  margin-top: 20px;\par
+\}\par
+\par
+/* Responsive Design */\par
+@media (max-width: 768px) \{\par
+  .content \{\par
+    flex-direction: column;\par
+  \}\par
+  .navbar \{\par
+    flex-direction: column;\par
+    text-align: center;\par
+  \}\par
+  .navbar ul \{\par
+    flex-direction: column;\par
+    gap: 5px;\par
+  \}\par
+\}\par
+\par
+\b\f1\fs28\bullet  \ul Typography and Web Fonts\par
+\ulnone\b0\f0\fs22\par
+\b\fs24\lang1033 6. \f1\lang9\bullet  Task: Create a blog post layout with the following:\par
+\f0\lang1033         \f1\lang9\bullet  A title, subtitle, and body content.\par
+\f0\lang1033         \f1\lang9\bullet  Use at least two different fonts (one for headings, one for body content).\par
+\f0\lang1033         \f1\lang9\bullet  Style the text to be responsive and easy to read.\par
+\f0\lang1033   \f1\lang9 Additional Requirements:\f0\lang1033 ---\f1\lang9\par
+\f0\lang1033         \f1\lang9\bullet  Use a custom font from Google Fonts.\par
+\f0\lang1033         \f1\lang9\bullet  Adjust line-height, font-size, and spacing for improved readability.\par
+\par
+\b0\fs22 <!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+  <meta charset="UTF-8">\par
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+  <title>Blog Post</title>\par
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">\par
+  <link rel="stylesheet" href="styles.css">\par
+</head>\par
+<body>\par
+  <div class="blog-post">\par
+    <h1 class="title">The Beauty of CSS</h1>\par
+    <h2 class="subtitle">How Styles Shape the Web</h2>\par
+    <p class="body">\par
+      CSS (Cascading Style Sheets) is a cornerstone technology of the web. It allows developers to bring life to HTML elements through colors, typography, and layout. Mastering CSS is essential for building beautiful, responsive, and user-friendly web experiences.\par
+    </p>\par
+  </div>\par
+</body>\par
+</html>\par
+\par
+\b\f0\fs24 css:---\par
+\par
+\b0\fs22\par
+\par
+/* Importing Google Fonts */\par
+body \{\par
+  font-family: 'Roboto', sans-serif; /* Body font */\par
+  line-height: 1.8;\par
+  margin: 20px;\par
+  padding: 0;\par
+  color: #333;\par
+  background-color: #f9f9f9;\par
+\}\par
+\par
+\par
+.title \{\par
+  font-family: 'Merriweather', serif; /* Heading font */\par
+  font-size: 2.5rem;\par
+  margin-bottom: 10px;\par
+  color: #222;\par
+  text-align: center;\par
+\}\par
+\par
+\par
+.subtitle \{\par
+  font-family: 'Merriweather', serif;\par
+  font-size: 1.5rem;\par
+  margin-bottom: 20px;\par
+  color: #555;\par
+  text-align: center;\par
+\}\par
+\par
+\par
+.body \{\par
+  font-size: 1rem;\par
+  line-height: 1.8;\par
+  max-width: 700px;\par
+  margin: 0 auto;\par
+  text-align: justify;\par
+  padding: 0 15px;\par
+\}\par
+\par
+/* Responsive Typography */\par
+@media (max-width: 768px) \{\par
+  .title \{\par
+    font-size: 2rem;\par
+  \}\par
+  .subtitle \{\par
+    font-size: 1.2rem;\par
+  \}\par
+  .body \{\par
+    font-size: 0.9rem;\par
+  \}\par
+\}\f1\par
+\f0\par
+\b\par
+}
+ 

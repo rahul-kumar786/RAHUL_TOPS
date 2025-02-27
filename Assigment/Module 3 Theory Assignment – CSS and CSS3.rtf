@@ -1,0 +1,211 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.26100}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\ul\b\f0\fs28\lang9 CSS Selectors & Styling\par
+\fs24 Theory Assignment\ulnone   :--\ul\par
+
+\pard\sl240\slmult1\ulnone\f1 Question 1: What is a CSS selector? Provide examples of element, class, and ID \f0\lang1033          \par
+   \f1\lang9 selectors.\par
+\f0\lang1033 Ans => \b0\fs22 A CSS selector is a pattern used to select and style HTML elements based on their attributes, such as tag name, class, or ID. \par
+\par
+1.  \b Element Selector \b0 : Targets an HTML element by its tag name. For example, `p \{ color: blue; \}` will style all `<p>` elements with blue text.\par
+\par
+2.  \b Class Selector \b0 : Targets elements with a specific class attribute. It is written with a dot (`.`) before the class name. For example, `.button \{ background-color: green; \}` styles all elements with the class `button` to have a green background.\par
+\par
+3. \b ID Selector \b0 : Targets a specific element with a unique ID attribute. It is written with a hash (`#`) before the ID name. For example, `#header \{ font-size: 24px; \}` styles the element with the ID `header` to have a font size of 24px.\par
+\b\f1\fs24\lang9\par
+Question 2: Explain the concept of CSS specificity. How do conflicts between \f0\lang1033           \par
+   \f1\lang9 multiple\f0\lang1033  \f1\lang9 stylesget resolved?\par
+\f0\lang1033 Ans => \b0\fs22 CSS Specificit determines which CSS rule takes precedence when multiple rules target the same element. It is calculated based on the types of selectors used.\par
+- Inline styles have the highest specificity.\par
+- ID selectors have higher specificity than clas or element selectors.\par
+- Class and pseudo-class selectors have higher specificity than element selectors.\b\f1\fs24\lang9\par
+\par
+Question 3: What is the difference between internal, external, and inline CSS? \f0\lang1033             \par
+   \f1\lang9 Discuss\f0\lang1033  \f1\lang9 theadvantages and disadvantages of each approach.\par
+\f0\lang1033 Ans => \b0\fs22 Internal CSS : CSS inside a `<style>` tag in the HTML `<head>`.  \par
+- Advantages : Easy for single-page sites.  \par
+- Disadvantages : Not reusable, increases page size.\par
+\par
+External CSS : CSS in a separate `.css` file linked to HTML.  \par
+- Advantages : Reusable, cleaner HTML.  \par
+- Disadvantages : Requires extra HTTP request.\par
+\par
+Inline CSS : CSS applied directly in HTML elements using the `style` attribute.  \par
+- Advantages : Quick for specific elements.  \par
+- Disadvantages : Not reusable, messy HTML.\par
+\par
+\b\f1\fs28\bullet  \ul CSS Box Model\par
+\par
+\ulnone\fs24 Question 1: Explain the CSS box model and its components (content, padding,\f0                 \f1\par
+\f0    \f1 border,margin). How does each affect the size of an element?\par
+\f0 Ans => \b0\fs22 The CSS box model defines the structure of an element and how its size is calculated. It consists of four components:\par
+\par
+\b 1. Content \b0 : The actual area where text or other content is displayed. It defines the width and               \par
+                       height of the element.\par
+\b 2. Padding \b0 : Space around the content, inside the element's border. It increases the overall size of       \par
+                       the element.\par
+\b 3. Border \b0 : Surrounds the padding (if any). It adds extra space around the content and padding.\par
+\b 4. Margin \b0 : The outermost space, outside the border. It separates the element from other                         \par
+                      elements.\par
+\par
+\b How they affect size:\b0\par
+- Width/height only apply to the content.\par
+- Padding and borde add to the total width and height of the element.\par
+- Margin doesn't affect the element's size but controls the space around it. \par
+\par
+Total element size = content + padding + border + margin.\b\f1\fs24\line\par
+Question 2: What is the difference between border-boxand content-boxbox-sizing \f0          \par
+   \f1 inCSS?\f0   \f1 Which is the default?\par
+\f0 Ans => \fs22 content-box (default): \b0 The width and height apply only to the content area. Padding and border are added outside the element's width and height, increasing its total size.\par
+\par
+border-box: The width and height include padding and border. The total size remains the same, and padding/border are included within the specified width and height.\par
+\par
+\b\f1\fs28\bullet  \ul CSS Flexbox\ulnone\par
+\par
+\fs24 Question 1: What is CSS Flexbox, and how is it useful for layout design? Explain the \f0        \par
+    \f1 terms\f0  \f1 flex-container and flex-item.\par
+\f0 Ans => \b0\fs22 CSS Flexbox is a layout model that allows items within a container to be dynamically arranged, aligned, and distributed with flexibility. It simplifies the design of complex layouts.\par
+\par
+- \b Flex-container \b0 : The parent element that holds the flex items. It is set using `display: flex` or            \par
+                              `display: inline-flex`.\par
+- \b Flex-item \b0 : The child elements inside the flex-container. They are automatically arranged                         \par
+                       according to the flexbox rules.\par
+\par
+\b Usefulness\b0  : Flexbox makes it easy to create responsive layouts, align items, and distribute space efficiently across rows or columns.\b\fs24\par
+\f1\par
+Question 2: Describe the properties justify-content, align-items, and flex-direction\f0           \f1\par
+\f0     \f1 used in Flexbox.\par
+\f0 Ans => \b0\fs22 1. justify-content : Aligns flex items along the main axis (horizontal by default). It controls the spacing between items.\par
+   - Values: flex-start, flex-end, center, space-between,  space-around, space-evenly .\par
+\par
+2. align-items : Aligns flex items along the cross axis (vertical by default).\par
+   - Values: flex-start, flex-end, center, baseline, stretch.\par
+\par
+3. flex-direction : Defines the direction of the main axis and the layout of flex items.\par
+   - Values: row (default), row-reverse, column, column-reverse .\par
+\par
+\b\f1\fs28\bullet  \ul CSS Grid\f0  :--\ulnone\b0\fs22\par
+\par
+\b\f1\fs24\lang9\bullet  Question 1: Explain CSS Grid and how it differs from Flexbox. When would you use Grid\f0\lang1033  \f1\lang9 overFlexbox?\par
+\f0\lang1033 Ans => \fs22 CSS Grid vs. Flexbox:--\b0\par
+\par
+\b 1. CSS Grid\b0   - A two-dimensional layout system, allowing you to design layouts in rows and columns simultaneously.\par
+   - Best for creating complex layouts like grids, dashboards, or page templates.\par
+   - Uses `grid-template-rows` and `grid-template-columns` to define the structure.\par
+   - Example: `display: grid; grid-template-columns: 1fr 1fr;`.\par
+\par
+2. \b Flexbox :\b0\par
+   - A one-dimensional layout system, focusing on arranging items in a row or a column (not                    \par
+      both).\par
+   - Best for aligning and distributing items within a container (like a navbar or single-row card         \par
+     layout).\par
+   - Uses `flex-direction` (row or column) and alignment properties like `justify-content`.\par
+\par
+\b When to Use Grid over Flexbox :--\b0\par
+- Use CSS Grid  for complex, two-dimensional layouts (e.g., image galleries, full-page layouts).\par
+- Use Flexbox for simple, one-dimensional layouts (e.g., navbars, button groups, or aligning items in         \par
+   a single direction). \par
+\b\f1\fs24\lang9\par
+\bullet  Question 2: Describe the grid-template-columns, grid-template-rows, and grid-gapproperties.\f0\lang1033  \f1\lang9 Provide examples of how to use them.\par
+\f0\lang1033 Ans => Grid Properties:--\b0\par
+\par
+\b 1. grid-template-columns :--\b0\par
+   - Specifies the number and sizes of columns in a grid layout.\par
+   - Can use values like `px`, `%`, `fr` (fractional units), or `auto`.\par
+   - Example: `grid-template-columns: 1fr 2fr;` creates two columns, one taking 1 fraction of space, and the other taking 2.\par
+\par
+\b 2. grid-template-rows :--\b0\par
+   - Defines the number and sizes of rows in a grid.\par
+   - Similar to `grid-template-columns`, supports flexible units.\par
+   - Example: `grid-template-rows: 100px auto;` creates two rows, the first with a fixed height of 100px, the second dynamically filling available space.\par
+\par
+\b 3. grid-gap (or `gap`) :--\b0\par
+   - Adds spacing between grid rows and columns.\par
+   - Example: `grid-gap: 20px;` adds 20px spacing between both rows and columns.\par
+\par
+\ul\b\f1\lang9\par
+\ulnone\fs28\bullet  \ul Responsive Web Design with Media Queries\f0\lang1033  :--\par
+\par
+\ulnone\f1\fs24\bullet  Question 1: What are media queries in CSS, and why are they important for\f0              \f1\par
+\f0    \f1 responsivedesign?\par
+\f0 Ans => \par
+\fs22      Media Queries in CSS :--\b0\par
+\par
+- \b Definition :\b0  Media queries are a CSS feature that applies styles based on device characteristics like screen size, resolution, or orientation.\par
+- \b Syntax :\b0  `@media` is used to define conditional styles.\par
+  \b Example: \par
+  css\par
+\b0   @media (max-width: 768px) \{\par
+    body \{\par
+      font-size: 14px;\par
+    \}\par
+  \}\par
+\par
+\b Importance for Responsive Design :---\b0\par
+- Adaptability : Ensures a website looks good on all devices (desktop, tablet, mobile).\par
+- User Experience : Adjusts layout, font size, and spacing for better readability and usability.\par
+- Efficiency : Enables a single codebase to handle multiple screen sizes without duplicating styles.\par
+\par
+Media queries are a cornerstone of responsive web design!\b\f1\fs24\par
+\par
+\bullet  Question 2: Write a basic media query that adjusts the font size of a webpage for\par
+\f0    \f1 screenssmaller than 600px\f0 .\par
+Ans => \fs22 Basic Media Query Example :--\b0\par
+To adjust the font size for screens smaller than 600px:\par
+\b\fs24 css:--\b0\fs22\par
+@media (max-width: 600px) \{\par
+  body \{\par
+    font-size: 14px; /* Smaller font size for small screens */\par
+  \}\par
+\}\par
+\b\fs24 Explanation :--\b0\fs22\par
+- `@media (max-width: 600px)`: Targets devices with a screen width of 600px or less.\par
+- `body \{ font-size: 14px; \}`: Reduces the font size to improve readability on smaller screens.\par
+\par
+\b\f1\fs28\lang9\bullet  \ul Typography and Web Fonts\f0\lang1033  :--\par
+\par
+\ulnone\f1\fs24\bullet  Question 1: Explain the difference between web-safe fonts and custom web fonts.\par
+\f0    \f1 Whymight you use a web-safe font over a custom font?\par
+\f0 Ans => \fs22 Web-Safe Fonts vs. Custom Web Fonts :--\b0\par
+\par
+1. \b Web-Safe Fonts:--\b0\par
+   - Pre-installed on most devices (e.g., Arial, Times New Roman, Verdana).\par
+   - Reliable and load quickly since they don't require external files.\par
+   - Example: `font-family: Arial, sans-serif;`.\par
+\par
+2. \b Custom Web Fonts:---\b0\par
+   - Fonts not pre-installed, loaded via external services (e.g., Google Fonts, Adobe Fonts).\par
+   - Offer unique typography but can impact performance due to file loading.\par
+   - Example: `font-family: 'Roboto', sans-serif;`.\par
+\b\par
+Why Use Web-Safe Fonts?\par
+\b0 - Faster loading times (no external requests).\par
+- Greater compatibility across devices.\par
+- Ideal for performance-critical or older-browser-compatible websites.\b\f1\fs24\par
+\par
+\bullet  Question 2: What is the font-familyproperty in CSS? How do you apply a custom \f0             \par
+   \f1 Google\f0  \f1 Font to a webpage?\par
+\f0 Ans => \fs22 Font-Family Property in CSS :--\b0\par
+- \b Definition \b0 : The `font-family` property specifies the font type for text in a webpage.\par
+- \b Syntax:--\b0  \par
+\b\fs24   css\b0\fs22\par
+  font-family: "Arial", sans-serif;\par
+  - Includes a font stack: primary font and fallback fonts.\par
+\par
+\b Applying a Custom Google Font :--\b0\par
+1. \b Import the Font:--\b0\par
+   - Add the font's `<link>` from Google Fonts to the `<head>` of your HTML:\par
+     \b html:--\b0\par
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"           \par
+      rel="stylesheet">\par
+    \par
+2. \b Use in CSS :--\b0\par
+   - Apply the font with `font-family`:\par
+     ```css\par
+     body \{\par
+       font-family: 'Roboto', sans-serif;\par
+     \}\par
+    \par
+\b\fs24\lang9\par
+}
+ 
