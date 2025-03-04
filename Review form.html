@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Form</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Leave a Review</h2>
+    <form  method="post" style="max-width: 400px; margin: auto;">
+        
+        <label for="name">Your Name:</label><br>
+        <input type="text" name="name" placeholder="Enter your name" required style="width: 100%; padding: 8px; margin: 10px 0;"><br>
+        
+        
+        <label for="email">Your Email:</label><br>
+        <input type="email" name="email" placeholder="Enter your email" required style="width: 100%; padding: 8px; margin: 10px 0;"><br>
+        
+       
+        <label for="rating">Rating (1 to 5):</label><br>
+        <input type="number" name="rating" min="1" max="5" placeholder="Rate 1 to 5" required style="width: 100%; padding: 8px; margin: 10px 0;"><br>
+        
+        
+        <label for="review">Your Review:</label><br>
+        <textarea  name="review" rows="3" placeholder="Write your review here..." required style="width: 100%; padding: 8px; margin: 10px 0;"></textarea><br>
+        
+        
+        <input type="submit" value="Submit Review" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
+    </form>
+</body>
+</html>
