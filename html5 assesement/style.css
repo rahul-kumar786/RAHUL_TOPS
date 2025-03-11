@@ -1,0 +1,181 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fff;
+    color: #333;
+}
+
+
+.container {
+    display: flex;
+}
+
+
+.sidebar {
+    width: 20%;
+    background: #4A4A4A;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 1.8rem;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.sidebar nav a:hover {
+    text-decoration: underline;
+}
+
+
+.main-content {
+    width: 80%;
+}
+
+
+.hero {
+    height: 50vh;
+    background: url('https://thumbs.dreamstime.com/b/hands-computer-desk-using-laptop-rustic-wood-background-cup-tea-book-globe-glasses-53253551.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    max-width: 400px;
+    backdrop-filter: blur(5px);
+}
+
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.about-item {
+    width: 45%;
+}
+
+
+.work {
+    padding: 2rem;
+    text-align: center;
+}
+
+.work-gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-gallery img {
+    width: 22%;
+    border-radius: 8px;
+}
+
+
+.clients {
+    padding: 2rem;
+    text-align: center;
+}
+
+.client-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.client-logos img {
+    max-width: 120px;
+}
+
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background: #f9f9f9;
+}
+
+.contact-info {
+    width: 40%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-item,
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .work-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-gallery img{
+        width:80%
+    }
+}
