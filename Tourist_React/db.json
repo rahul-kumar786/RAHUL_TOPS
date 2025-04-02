@@ -1,0 +1,105 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "user1",
+      "email": "user@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "1741196102941",
+      "name": "ayan",
+      "email": "ayan@gmail.com",
+      "phone": "485625525",
+      "password": "1234",
+      "status": "unblock"
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "packeges": [
+    {
+      "id": "1",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGTjNnorFaW-12EQZwrEskZ5mq5HBcVKJcjQ&s",
+      "days": "4",
+      "person": "2",
+      "price": "1000",
+      "desc": "sefethdyrngrh5y",
+      "city": "India"
+    },
+    {
+      "id": "2",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGTjNnorFaW-12EQZwrEskZ5mq5HBcVKJcjQ&s",
+      "days": "7",
+      "person": "2",
+      "price": "1800",
+      "desc": "3t45grtgethryh",
+      "city": "India"
+    },
+    {
+      "id": "3",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGTjNnorFaW-12EQZwrEskZ5mq5HBcVKJcjQ&s",
+      "days": "10",
+      "person": "2",
+      "price": "2800",
+      "desc": "dfergthynhrhtyh5",
+      "city": "India"
+    },
+    {
+      "id": "4",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGTjNnorFaW-12EQZwrEskZ5mq5HBcVKJcjQ&s",
+      "days": "4",
+      "person": "5",
+      "price": "1400",
+      "desc": "cfesg4tyw65gq3fg53r",
+      "city": "India"
+    },
+    {
+      "id": "1723782285555",
+      "url": "",
+      "price": "30000",
+      "city": "USA",
+      "days": "4",
+      "person": "4",
+      "desc": "hgjygsqbxys"
+    }
+  ],
+  "service": [
+    {
+      "id": "1",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhhPx3kevkpTpgGTdZAlTNCNxrW0xRrWNBg&s",
+      "title": "WorldWide Tours",
+      "desc": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam"
+    },
+    {
+      "id": "2",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhhPx3kevkpTpgGTdZAlTNCNxrW0xRrWNBg&s",
+      "title": "Hotel Reservation",
+      "desc": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam"
+    },
+    {
+      "id": "3",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhhPx3kevkpTpgGTdZAlTNCNxrW0xRrWNBg&s",
+      "title": "Travel Guides",
+      "desc": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam"
+    },
+    {
+      "id": "4",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhhPx3kevkpTpgGTdZAlTNCNxrW0xRrWNBg&s",
+      "title": "Hotel Reservation",
+      "desc": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam"
+    },
+    {
+      "id": "1721991261245",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAkllXExOi8qdqF5Poh46uyTljRpfcc0HZW-0NI77_W247TGjzLaMD7iEQ2RjGxLDaP9U&usqp=CAU",
+      "title": "Hotel service",
+      "desc": "hotel service provide asda asdfaklshdasn"
+    }
+  ]
+}

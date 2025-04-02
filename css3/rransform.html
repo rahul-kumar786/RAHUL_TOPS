@@ -1,0 +1,39 @@
+<!-- transform: rotateX(50deg);
+transform: rotateY(50deg);
+transform: rotateZ(40deg); -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+div.test {
+  width: 100px;
+  height: 100px;
+  background: red;
+  
+  transition-property: width height color font-size;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+  
+  transition: width 2s linear 1s;
+}
+
+div.test:hover {
+  transform: scale(3,3);
+  font-size:30px;
+  color:#FF0;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Transition </h1>
+<div align="center">
+	<div class="test" >raj nagar</div><span>Hello</span>
+</div>
+
+</body>
+</html>
