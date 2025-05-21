@@ -1,0 +1,180 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.26100}\viewkind4\uc1 
+\pard\sl276\slmult1\b\f0\fs28\lang9 Module 6 \f1\endash  Mernstack \endash  Javascript Essential and Advanced \f0\lang1033 :----\f1\par
+\f0 ----------------------------\f1  Theory Assignment\f0 ------------------------------\f1  \par
+\par
+\bullet  JavaScript Introduction\f0 :--\par
+\par
+\f1\fs24\lang9\bullet  Question 1: What is JavaScript? Explain the role of JavaScript in web development. \par
+\f0\lang1033 ANS =>\b0 JavaScript is a high-level, interpreted scripting language used to create dynamic and interactive effects within web browsers. In web development, it enables real-time content updates, form validation, animations, and interaction without reloading the page.\par
+\f1\lang9\par
+\b\bullet  Question 2: How is JavaScript different from other programming languages like Python or Java? \par
+\f0\lang1033 ANS => \f1\lang9\bullet\f0\lang1033  \b0 JavaScript is mainly used for client-side scripting, while Python and Java are used for server-side and application development.\par
+\b\f1\lang9\bullet\f0\lang1033  \b0 JavaScript is dynamically typed; Java is statically typed.\par
+\b\f1\lang9\bullet\f0\lang1033  \b0 JavaScript runs in browsers; Java and Python run on virtual machines or interpreters.\par
+\b\f1\lang9\bullet\f0\lang1033  \b0 JavaScript has a prototype-based object model, whereas Java and Python use class-based models.\par
+\b\f1\lang9\par
+\bullet  Question 3: Discuss the use of <script> tag in HTML. How can you link an external JavaScript file to an HTML document? \f0\lang1033         \par
+ANS \b0 =>  <script src="script.js"></script>      \b\par
+\fs28\par
+\f1\bullet  Variables and Data Types \f0 :--\par
+\par
+\f1\fs24\bullet  Question 1: What are variables in JavaScript? How do you declare a variable using \f0      \par
+\f1 var, let, and const?\par
+\f0 ANS => \f1  \bullet  \f0  \b0 var: Function-scoped, can be redeclared and updated.\par
+\b\f1  \bullet  \f0  \b0 let: Block-scoped, can be updated but not redeclared in the same scope.\par
+\b\f1  \bullet  \f0  \b0 const: Block-scoped, cannot be updated or redeclared.\par
+\f1\par
+\b  \bullet  Question 2: Explain the different data types in JavaScript. Provide examples for each. \par
+\f0 ANS => \f1  \b0\bullet  \f0  String \f1\endash  "Hello"\par
+\bullet  Number \endash  42, 3.14\par
+\bullet  Boolean \endash  true, false\par
+\bullet  Undefined \endash  a variable declared but not assigned\par
+\bullet  Null \endash  an intentional absence of value\par
+\bullet  Object \endash  \{ name: "Ali", age: 20 \}\par
+\bullet  Array \endash  [1, 2, 3]\par
+\bullet  Symbol \endash  Symbol('id')\par
+\b\bullet  Question 3: What is the difference between undefined and null in JavaScript? \par
+\f0 ANS => \f1\bullet\f0  \b0 undefined: A variable is declared but not assigned a value.\par
+\b\f1\bullet\f0  \b0 null: A variable is explicitly assigned "no value".\par
+\b\fs28\par
+\f1\bullet  JavaScript Operators \f0 :--\par
+\par
+\f1\fs24\bullet  Question 1: What are the different types of operators in JavaScript? Explain with examples. \par
+\bullet  Arithmetic operators \par
+\f0 ANS =>\b0 Arithmetic Operators:\par
++, -, *, /, %\par
+Example: 5 + 3 = 8\par
+\f1\par
+\b\bullet  Assignment operators \par
+\f0 ANS =>\b0 Assignment Operators:\par
+=, +=, -=, *=, /=\par
+Example: x += 2 (same as x = x + 2)\par
+\f1\par
+\b\bullet  Comparison operators \par
+\f0 ANS =>\b0 Comparison Operators:\par
+==, ===, !=, <, >, <=, >=\par
+Example: 5 == "5" is true; 5 === "5" is false\par
+\f1\par
+\b\bullet  Logical operators \par
+\f0 ANS =>\b0 Logical Operators:\par
+&& (AND), || (OR), ! (NOT)\par
+Example: true && false = false\par
+\b\f1\par
+\bullet  Question 2: What is the difference between == and === in JavaScript? \par
+\f0 ANS => \f1\bullet\f0  \b0 == compares values only (type coercion allowed).\par
+\b\f1\bullet\f0  \b0 === compares both value and type (strict equality).\par
+\b\par
+\f1\bullet  Control Flow (If-Else, Switch) \f0 :--\par
+\par
+\f1\bullet  Question 1: Explain the different types of loops in JavaScript (for, while, do-while). Provide a basic example of each.\par
+\f0 ANS =>\b0 for(let i=0; i<5; i++) \{\par
+  console.log(i);\par
+\}\par
+\par
+let i = 0;\par
+while(i < 5) \{\par
+  console.log(i);\par
+  i++;\par
+\}\par
+\par
+let i = 0;\par
+do \{\par
+  console.log(i);\par
+  i++;\par
+\} while(i < 5);\par
+\par
+\f1\par
+\b\bullet  Question 2: What is the difference between a while loop and a do-while loop? \par
+\f0 ANS =>\f1\bullet\b0\f0 while checks condition first.\par
+\b\f1\bullet\b0\f0 do-while runs the block once before checking the condition.\par
+\b\par
+\f1\fs28\bullet  Functions \f0 :--\par
+\par
+\f1\fs24\bullet  Question 1: What are functions in JavaScript? Explain the syntax for declaring and calling a function. \par
+\f0 ANS =>\b0 function greet(name) \{\par
+  return "Hello " + name;\par
+\}\f1\par
+\b\bullet  Question 2: What is the difference between a function declaration and a function expression? \par
+\f0 ANS =>\f1\bullet\b0\f0 Declaration is hoisted:-\par
+function greet() \{\}\par
+\b\f1\bullet\f0  \b0 Expression is not hoisted:\par
+const greet = function() \{\};\b\f1\par
+\bullet  Question 3: Discuss the concept of parameters and return values in functions.\par
+\f0 ANS \b0 =>\f1\bullet\f0 Parameters: Inputs to a function.\par
+\f1\bullet\f0 Return: Output value sent back from function.\par
+function add(a, b) \{\par
+  return a + b;\par
+\}\par
+\b\par
+\f1\fs28\bullet  Arrays \f0 :--\f1  \par
+\par
+\fs24\bullet  Question 1: What is an array in JavaScript? How do you declare and initialize an array? \par
+\f0 ANS =>\b0\f1 An array stores multiple values in a single variable\b .\par
+\b0 let colors = ["red", "green", "blue"];\par
+\b\par
+\bullet  Question 2: Explain the methods push(), pop(), shift(), and unshift() used in arrays. \par
+\f0 ANS =>\b0 push(): Adds to end\par
+pop(): Removes from end\par
+shift(): Removes from start\par
+unshift(): Adds to start\b\par
+\par
+\f1\fs28\bullet  Objects \f0 :--\par
+\par
+\f1\fs24\bullet  Question 1: What is an object in JavaScript? How are objects different from arrays?\par
+\f0 ANS =>\f1  \b0 Objects store key-value pairs; arrays store ordered items.\par
+let person = \{ name: "Ali", age: 20 \};\par
+\b\par
+\bullet  Question 2: Explain how to access and update object properties using dot notation and bracket notation.\par
+\f0 ANS =>\f1  \b0 Dot notation: person.name = "John"\par
+Bracket notation: person["age"] = 30\f0\par
+\b\fs28\par
+\f1\bullet  JavaScript Events  \f0 :--\par
+\par
+\f1\fs24\bullet  Question 1: What are JavaScript events? Explain the role of event listeners.\par
+\f0 ANS =>\f1   \b0 Events are actions like clicks or keypresses. Event listeners wait and respond to these events.\b\par
+\bullet  Question 2: How does the addEventListener() method work in JavaScript? Provide an example. \par
+\f0 ANS =>\f1  \b0 document.getElementById("btn").addEventListener("click", () => \{\par
+  alert("Button clicked");\par
+\});\par
+\b\fs28\par
+\bullet  DOM Manipulation \f0 :--\par
+\par
+\f1\fs24\bullet  Question 1: What is the DOM (Document Object Model) in JavaScript? How does JavaScript interact with the DOM? \par
+\f0 ANS \b0 =>\f1  DOM (Document Object Model) represents HTML elements as objects. JavaScript can change content, structure, and style dynamically.\par
+\b\par
+\bullet  Question 2: Explain the methods getElementById(), getElementsByClassName(), and querySelector() used to select elements from the DOM. \par
+\f0 ANS =>\b0\f1 getElementById("id"): Selects by ID\par
+\par
+getElementsByClassName("class"): Selects by class (HTMLCollection)\par
+\par
+querySelector(".class" or "#id"): CSS-style selector (first match)\par
+\b\par
+\fs28\bullet  JavaScript Timing Events (setTimeout, setInterval) \f0 :--\par
+\par
+\f1\fs24\bullet  Question 1: Explain the setTimeout() and setInterval() functions in JavaScript. How are they used for timing events?\par
+\f0 ANS =>\f1   \b0 setTimeout(): Runs a function once after delay\par
+\par
+setInterval(): Runs a function repeatedly at intervals\b\par
+\par
+\bullet  Question 2: Provide an example of how to use setTimeout() to delay an action by 2 seconds. \par
+\f0 ANS =>\f1  \b0 setTimeout(() => \{\par
+  console.log("This runs after 2 seconds");\par
+\}, 2000);\par
+\b\par
+\fs28\bullet  JavaScript Error Handling \f0 :--\par
+\par
+\f1\fs24\bullet  Question 1: What is error handling in JavaScript? Explain the try, catch, and finally blocks with an example. \par
+\f0 ANS \b0 =>\f1  try \{\par
+  let x = y + 1;\par
+\} catch (err) \{\par
+  console.log("Error:", err.message);\par
+\} finally \{\par
+  console.log("Always runs");\par
+\}\par
+\par
+\b\bullet  Question 2: Why is error handling important in JavaScript applications? \par
+\f0 ANS =>\f1  \b0 It prevents the application from crashing and allows for graceful error messages and fallback mechanisms.\b\f0\fs32\par
+\fs22                          \lang9\par
+}
+ 

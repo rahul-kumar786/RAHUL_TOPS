@@ -1,0 +1,223 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.26100}\viewkind4\uc1 
+\pard\sl276\slmult1\b\f0\fs28\lang9 Module 6 \f1\endash  Mernstack \endash  Javascript Essential and Advanced \f0\lang1033 :----\f1\par
+\f0 ----------------------------\f1  Lab Assignment \f0 ------------------------------\f1  \par
+\par
+\fs24\bullet  \fs28 JavaScript Introduction \f0 :--\par
+\par
+\f1\fs24\bullet  Task: \par
+\bullet  Create a simple HTML page and add a <script> tag within the page.\par
+\f0 ANS=>\b0 <!DOCTYPE html>\par
+<html>\par
+<head>\par
+  <title>JavaScript Intro</title>\par
+</head>\par
+<body>\par
+  <script>\par
+    alert("Welcome to JavaScript!");\par
+  </script>\par
+</body>\par
+</html>\par
+\f1\par
+\b\bullet  Write JavaScript code to display an alert box with the message "Welcome to JavaScript!" when the page loads. \par
+\f0 ANS=>\b0 <!DOCTYPE html>\par
+<html>\par
+<head>\par
+  <title>JavaScript Intro</title>\par
+</head>\par
+<body>\par
+  <script>\par
+    alert("Welcome to JavaScript!");\par
+  </script>\par
+</body>\par
+</html>\par
+\b\par
+\f1\fs28\bullet  Variables and Data Types \f0 :--\par
+\par
+\f1\fs24\bullet  Task: \par
+\bullet  Write a JavaScript program to declare variables for different data types (string, number, boolean, null, and undefined).\par
+\bullet  Log the values of the variables and their types to the console using console.log().\par
+\f0 ANS=>\b0 let name = "Sohail";       // string  \par
+let age = 18;              // number  \par
+let isStudent = true;      // boolean  \par
+let value = null;          // null  \par
+let score;                 // undefined  \par
+\par
+console.log(name, typeof name);\par
+console.log(age, typeof age);\par
+console.log(isStudent, typeof isStudent);\par
+console.log(value, typeof value);\par
+console.log(score, typeof score);\b\f1\par
+\f0\par
+\f1\fs28\bullet  JavaScript Operators \f0 :--\par
+\par
+\f1\fs24\bullet  Task: \par
+\bullet  Create a JavaScript program to perform the following: \par
+\bullet  Add, subtract, multiply, and divide two numbers using arithmetic operators. \par
+\bullet  Use comparison operators to check if two numbers are equal and if one number is greater than the other. \par
+\bullet  Use logical operators to check if both conditions (e.g., a > 10 and b < 5) are true. \par
+\f0 ANS=>\b0 let a = 20, b = 5;\par
+console.log("Addition:", a + b);\par
+console.log("Subtraction:", a - b);\par
+console.log("Multiplication:", a * b);\par
+console.log("Division:", a / b);\par
+\par
+console.log(a == b);   // false\par
+console.log(a > b);    // trueconsole.log(a == b);   // false\par
+console.log(a > b);    // true\par
+\par
+console.log(a > 10 && b < 10); // true\par
+\b\par
+\f1\bullet  \fs28 Control Flow (If-Else, Switch) \f0 :--\par
+\par
+\f1\fs24\bullet  Task 1: \bullet  Write a JavaScript program to check if a number is positive, negative, or zero using an if-else statement. \par
+\f0 ANS=>\b0 let num = -3;\par
+if (num > 0) \{\par
+  console.log("Positive");\par
+\} else if (num < 0) \{\par
+  console.log("Negative");\par
+\} else \{\par
+  console.log("Zero");\par
+\}\par
+\f1\par
+\b\bullet  Task 2: \bullet  Create a JavaScript program using a switch statement to display the day of the week based on the user input (e.g., 1 for Monday, 2 for Tuesday, etc.). \par
+\f0 ANS=>\b0 let day = 3;\par
+switch(day) \{\par
+  case 1: console.log("Monday"); break;\par
+  case 2: console.log("Tuesday"); break;\par
+  case 3: console.log("Wednesday"); break;\par
+  case 4: console.log("Thursday"); break;\par
+  case 5: console.log("Friday"); break;\par
+  case 6: console.log("Saturday"); break;\par
+  case 7: console.log("Sunday"); break;\par
+  default: console.log("Invalid day");\par
+\}\f1\par
+\b\fs28\par
+\bullet  Loops (For, While, Do-While) \f0 :--\par
+\par
+\f1\fs24\bullet  Task 1: \bullet  Write a JavaScript program using a for loop to print numbers from 1 to 10.\par
+ \f0 ANS=>\b0 for (let i = 1; i <= 10; i++) \{\par
+  console.log(i);\par
+\}\par
+\b\f1\par
+\bullet  Task 2: \bullet  Create a JavaScript program that uses a while loop to sum all even numbers between 1 and 20.\par
+\f0 ANS=>\b0 let i = 1, sum = 0;\par
+while (i <= 20) \{\par
+  if (i % 2 === 0) sum += i;\par
+  i++;\par
+\}\par
+console.log("Sum:", sum);\par
+\b\f1\par
+\bullet  Task 3: \bullet  Write a do-while loop that continues to ask the user for input until they enter a number greater than 10. \par
+\f0 ANS=>\b0 let input;\par
+do \{\par
+  input = parseInt(prompt("Enter a number greater than 10:"));\par
+\} while (input <= 10);\par
+\b\par
+\f1\fs28\bullet  Arrays \f0 :--\par
+\par
+\f1\fs24\bullet  Task 1: \par
+\bullet  Declare an array of fruits (["apple", "banana", "cherry"]). Use JavaScript to: \par
+\bullet  Add a fruit to the end of the array. \par
+\bullet  Remove the first fruit from the array. \par
+\bullet  Log the modified array to the console. \par
+\f0 ANS=>\b0\f1 let fruits = ["apple", "banana", "cherry"];\par
+fruits.push("orange");   // Add to end\par
+fruits.shift();          // Remove first\par
+console.log(fruits);     // ["banana", "cherry", "orange"]\par
+\b\par
+\bullet  Task 2: \par
+\bullet  Write a program to find the sum of all elements in an array of numbers. \par
+\f0 ANS=> \b0 let nums = [1, 2, 3, 4, 5];\par
+let total = 0;\par
+for (let num of nums) \{\par
+  total += num;\par
+\}\par
+console.log("Total:", total);\f1\par
+\b\fs28\bullet  Objects \f0 :--\par
+\f1\fs24\par
+\lang9\bullet  Task: \par
+\bullet  Create a JavaScript object car with properties brand, model, and year. Use JavaScript to: \par
+\bullet  Access and print the car\rquote s brand and model. \par
+\bullet  Update the year property. \par
+\bullet  Add a new property color to the car object. \par
+\f0\lang1033 ANS=> \f1\lang9\par
+\b0 let car = \{\par
+  brand: "Toyota",\par
+  model: "Corolla",\par
+  year: 2020\par
+\};\par
+\par
+console.log(car.brand, car.model);\par
+car.year = 2023;\par
+car.color = "Black";\par
+console.log(car);\par
+\b\fs28\par
+\bullet  JavaScript Events \f0\lang1033 :--\par
+\par
+\f1\fs24\bullet  Task: \par
+\bullet  Create a simple webpage with a button that, when clicked, displays an alert saying "Button clicked!" using JavaScript event listeners. \par
+\f0 ANS=>  \b0 <!DOCTYPE html>\par
+<html>\par
+<body>\par
+  <button id="myBtn">Click Me</button>\par
+\par
+  <script>\par
+    document.getElementById("myBtn").addEventListener("click", () => \{\par
+      alert("Button clicked!");\par
+    \});\par
+  </script>\par
+</body>\par
+</html>\f1\par
+\b\par
+\fs28\bullet  DOM Manipulation \f0 :--\par
+\par
+\f1\fs24\bullet  Task: \par
+\bullet  Create an HTML page with a paragraph (<p>) that displays "Hello, World!". \par
+\bullet  Use JavaScript to: \par
+\bullet  Change the text inside the paragraph to "JavaScript is fun!". \par
+\bullet  Change the color of the paragraph to blue. \par
+\f0 ANS\b0 => <!DOCTYPE html>\par
+<html>\par
+<body>\par
+  <p id="myText">Hello, World!</p>\par
+\par
+  <script>\par
+    let p = document.getElementById("myText");\par
+    p.textContent = "JavaScript is fun!";\par
+    p.style.color = "blue";\par
+  </script>\par
+</body>\par
+</html>\f1\par
+\b\par
+\fs28\bullet  JavaScript Timing Events (setTimeout, setInterval) \f0 :--\par
+\par
+\f1\fs24\bullet  Task 1: \par
+\bullet  Write a program that changes the background color of a webpage after 5 seconds using setTimeout(). \par
+\f0 ANS=> \b0 setTimeout(() => \{\par
+  document.body.style.backgroundColor = "lightblue";\par
+\}, 5000);\f1\par
+\b\bullet  Task 2: \par
+\bullet  Create a digital clock that updates every second using setInterval(). \par
+\f0 ANS=>\b0  <div id="clock"></div>\par
+\par
+<script>\par
+  setInterval(() => \{\par
+    let now = new Date();\par
+    document.getElementById("clock").textContent = now.toLocaleTimeString();\par
+  \}, 1000);\par
+</script>\par
+\b\f1\par
+\fs28\bullet  JavaScript Error Handling \f0 :--\par
+\par
+\f1\fs24\bullet  Task: \par
+\bullet  Write a JavaScript program that attempts to divide a number by zero. Use try- catch to handle the error and display an appropriate error message. \par
+\f0 ANS=>\b0  try \{\par
+  let result = 10 / 0;\par
+  if (!isFinite(result)) throw new Error("Cannot divide by zero");\par
+  console.log(result);\par
+\} catch (error) \{\par
+  console.log("Error:", error.message);\par
+\}\fs28\lang9\par
+}
+ 
