@@ -13,6 +13,22 @@
       "phone": "485625525",
       "password": "1234",
       "status": "unblock"
+    },
+    {
+      "id": "1744351780358",
+      "name": "asdf",
+      "email": "asdf@gmail.com",
+      "phone": "1234567890",
+      "password": "asdf@gmail.com",
+      "status": "unblock"
+    },
+    {
+      "id": "1746603829800",
+      "name": "ashish",
+      "email": "ashish@e.com",
+      "phone": "6206499756",
+      "password": "1234",
+      "status": "unblock"
     }
   ],
   "admin": [
@@ -100,6 +116,60 @@
       "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAkllXExOi8qdqF5Poh46uyTljRpfcc0HZW-0NI77_W247TGjzLaMD7iEQ2RjGxLDaP9U&usqp=CAU",
       "title": "Hotel service",
       "desc": "hotel service provide asda asdfaklshdasn"
+    },
+    {
+      "id": "1744276391516",
+      "icon": "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+      "title": " rahresturant",
+      "desc": "one room "
+    },
+    {
+      "id": "",
+      "icon": "",
+      "title": "",
+      "desc": ""
+    },
+    {
+      "id": "",
+      "icon": "",
+      "title": "",
+      "desc": ""
+    },
+    {
+      "id": "",
+      "icon": "",
+      "title": "",
+      "desc": ""
+    },
+    {
+      "id": "",
+      "icon": "",
+      "title": "",
+      "desc": ""
+    },
+    {
+      "id": "",
+      "icon": "",
+      "title": "",
+      "desc": ""
+    },
+    {
+      "id": "",
+      "icon": "",
+      "title": "",
+      "desc": ""
+    },
+    {
+      "id": "",
+      "icon": "",
+      "title": "",
+      "desc": ""
+    },
+    {
+      "id": "1744277181367",
+      "icon": "https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg",
+      "title": "ramu ",
+      "desc": "images"
     }
   ]
 }

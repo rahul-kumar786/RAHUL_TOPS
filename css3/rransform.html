@@ -8,20 +8,20 @@ transform: rotateZ(40deg); -->
 <style> 
 
 div.test {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background: red;
   
   transition-property: width height color font-size;
-  transition-duration: 1s;
+  transition-duration: 3s;
   transition-timing-function: linear;
   transition-delay: 1s;
   
-  transition: width 2s linear 1s;
+  /* transition: width 2s linear 1s; */
 }
 
 div.test:hover {
-  transform: scale(3,3);
+  transform: scale(5,5);
   font-size:30px;
   color:#FF0;
 }
@@ -31,8 +31,8 @@ div.test:hover {
 <body>
 
 <h1>Transition </h1>
-<div align="center">
-	<div class="test" >raj nagar</div><span>Hello</span>
+<div>
+	<div class="test" >raj nagar</div>
 </div>
 
 </body>
