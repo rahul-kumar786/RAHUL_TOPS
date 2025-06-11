@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Clock</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .date {
+      background: linear-gradient(to right, #a8edea, #fed6e3);
+      display: inline-block;
+      padding: 20px;
+      font-size: 28px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .time {
+      background: linear-gradient(to right, #00c3ff, #ffff1c, #ff0066);
+      display: inline-block;
+      padding: 20px 40px;
+      font-size: 36px;
+      font-weight: bold;
+      border-radius: 10px;
+      color: white;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="date" id="dateDisplay"></div>
+  <div class="time" id="timeDisplay"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
