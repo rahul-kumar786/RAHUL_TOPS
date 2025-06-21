@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NIVIA Style</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <div class="bg-black text-white text-center py-2">
+    Get 15% Off on purchases above ₹2500 or 30% on purchases above ₹5000
+  </div>
+
+  
+  <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://www.niviasports.com/cdn/shop/files/Nivia-Logo-Black-SVG_2_1.svg?v=1717751149&width=160" alt="NIVIA" height="70">
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link fw-bold" href="index.html">All SPORTS</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#">APPAREL</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#">FOOTWEAR</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#">FITNESS</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#">MUSCLE SPORTS</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#">ACCESSORIES</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#">OFFERS</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#">CLUBS</a></li>
+        </ul>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-dark"><i class="bi bi-search"></i></a>
+          <a href="#" class="text-dark"><i class="bi bi-person"></i></a>
+          <a href="#" class="text-dark position-relative">
+            <i class="bi bi-bag"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge bg-danger">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <div class="col-md-12 ">
+        <img src="https://www.niviasports.com/cdn/shop/collections/Fitness_Category_banners1.webp?v=1699278587&width=3000"
+            width="100%" />
+        <a href="access.html" class=""></a>
+    </div>
+
+    <br>
+    <div class="container my-4">
+  <!-- Breadcrumb -->
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a class="text-muted text-decoration-none" href="index.html">Home</a></li>
+    <li class="breadcrumb-item text-secondary">Fitness</li>
+  </ul>
+
+  <h2 class="mb-4">Fitness</h2>
+
+  <div class="row">
+    <!-- Sidebar Filter -->
+    <div class="col-lg-3 mb-4">
+      <!-- Category -->
+      <div class="mb-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Category</h5>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+        <ul class="list-group mt-2">
+          <li class="list-group-item d-flex justify-content-between">Fitness <span class="badge bg-secondary">53</span></li>
+          <li class="list-group-item d-flex justify-content-between">Gym <span class="badge bg-secondary">1</span></li>
+          <li class="list-group-item d-flex justify-content-between">Home Fitness <span class="badge bg-secondary">0</span></li>
+          <li class="list-group-item d-flex justify-content-between">Yoga <span class="badge bg-secondary">8</span></li>
+        </ul>
+      </div>
+
+      <!-- Size -->
+      <div class="mb-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Size</h5>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+        <ul class="list-group mt-2">
+          <li class="list-group-item d-flex justify-content-between">Accessories <span class="badge bg-secondary">53</span></li>
+          <li class="list-group-item d-flex justify-content-between">Agility Stick <span class="badge bg-secondary">1</span></li>
+          <li class="list-group-item d-flex justify-content-between">Air Needle <span class="badge bg-secondary">0</span></li>
+          <li class="list-group-item d-flex justify-content-between">Ball Pump <span class="badge bg-secondary">2</span></li>
+          <li class="list-group-item d-flex justify-content-between">Corner Flags <span class="badge bg-secondary">4</span></li>
+        </ul>
+      </div>
+
+      <!-- Price -->
+      <div class="mb-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Price</h5>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+        <div class="mt-3">
+          <label class="form-label">Price Range</label>
+          <input type="range" class="form-range" min="0" max="5000" step="100" id="priceRange">
+          <div class="d-flex justify-content-between">
+            <span>₹0</span>
+            <span id="priceValue">₹2500</span>
+            <span>₹5000+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="col-lg-9">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <p class="mb-2">53 products</p>
+        <div class="dropdown mb-2">
+          <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Sort by: Manual
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
+            <li><a class="dropdown-item" href="#">Price: High to Low</a></li>
+            <li><a class="dropdown-item" href="#">Newest Arrivals</a></li>
+            <li><a class="dropdown-item" href="#">Best Selling</a></li>
+            <li><a class="dropdown-item" href="#">Manual</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product Cards -->
+       <div class="row g-4">
+        
+        <div class="col-sm-6 col-lg-4">
+          <div class="card product-card text-center">
+            <img src="https://cdn.shopify.com/s/files/1/0555/8235/9665/files/TN-1179TBRay2.0Turqoise2_4683938b-6f0c-4fc7-ac1f-80a724a475cb.jpg?v=1716274519&width=500" class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-title mb-1">Ray 2.0</h6>
+              <div class="product-price">₹ 2,999</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="card product-card text-center">
+            <img src="https://cdn.shopify.com/s/files/1/0555/8235/9665/files/FB-3942SL_Oslar_3.0_Turf_2.jpg?v=1718443840&width=500" class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-title mb-1">Force Futsal</h6>
+              <div class="product-price">₹ 1,515</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="card product-card text-center">
+            <img src="https://cdn.shopify.com/s/files/1/0555/8235/9665/files/Hy-court_3.0_2B_97e4ecb0-7d86-45f4-86a0-fa154724d0bd.jpg?v=1735802747&width=500"  class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-title mb-1">Aviator 3.0 Turf</h6>
+              <div class="product-price">₹ 1,099</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="card product-card text-center">
+            <img src="https://cdn.shopify.com/s/files/1/0555/8235/9665/files/Hy-court_3.0_2B_97e4ecb0-7d86-45f4-86a0-fa154724d0bd.jpg?v=1735802747&width=500"  class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-title mb-1">Aviator 3.0 Turf</h6>
+              <div class="product-price">₹ 1,099</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="card product-card text-center">
+            <img src="https://cdn.shopify.com/s/files/1/0555/8235/9665/files/Hy-court_3.0_2B_97e4ecb0-7d86-45f4-86a0-fa154724d0bd.jpg?v=1735802747&width=500"  class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-title mb-1">Aviator 3.0 Turf</h6>
+              <div class="product-price">₹ 1,099</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="card product-card text-center">
+            <img src="https://cdn.shopify.com/s/files/1/0555/8235/9665/files/Hy-court_3.0_2B_97e4ecb0-7d86-45f4-86a0-fa154724d0bd.jpg?v=1735802747&width=500"  class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-title mb-1">Aviator 3.0 Turf</h6>
+              <div class="product-price">₹ 1,099</div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+        
+
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+                
+
+                
+
+
+
+ <footer class="bg-black text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row text-center text-md-start">
+
+      <!-- Signup & Social -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">#<span class="text-primary">MoveUp</span> by signing up</h5>
+        <div class="input-group mt-3 mb-3">
+          <input type="email" class="form-control bg-black text-white border-bottom" placeholder="Your email address" style="border: none; border-radius: 0; border-bottom: 1px solid white;">
+          <button class="btn text-danger fw-bold" type="button">SEND</button>
+        </div>
+        <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+          <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white fs-4"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Company Info -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold">COMPANY INFORMATION</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Terms And Conditions</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Exchange & Return Policy</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Track Order</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Blogs</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Catalogues</a></li>
+          <li><a href="#" class="text-white text-decoration-none">CSR Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Affiliations -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold">NIVIA AFFILIATIONS</h6>
+        <ul class="list-unstyled">
+          <li>AIFF</li>
+          <li>ISL</li>
+          <li>Bhutan Football Federation</li>
+          <li>Srilankan Football Federation</li>
+          <li>BFI</li>
+          <li>VFI</li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold">CONNECT WITH US</h6>
+        <p class="mb-1"><i class="bi bi-telephone"></i> +91-9115497521</p>
+        <p class="mb-1"><i class="bi bi-envelope"></i> contact@nivia.in</p>
+        <p class="small">(Mon-Sat, 10:00am till 6:00pm)</p>
+      </div>
+    </div>
+
+    <hr class="border-danger opacity-100" />
+
+    <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+      <img src="https://www.niviasports.com/cdn/shop/files/nivia-logo-white-svg.svg?v=1718367319&width=400" alt="Nivia Logo" style="height: 40px;" />
+      <p class="mb-0 small mt-3 mt-md-0">© 2024 Niviasports, All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap & Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

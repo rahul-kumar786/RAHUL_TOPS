@@ -1,0 +1,154 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.26100}\viewkind4\uc1 
+\pard\sl276\slmult1\b\f0\fs28\lang9 ------------------- Module 7 \f1\endash  Mernstack \endash  React JS -----------------------\par
+          ----------------------THEORY  EXERCISE --------------------------\par
+\par
+\bullet  Question 1: What is React.js? How is it different from other JavaScript frameworks and libraries?  \par
+Ans => React.js is a JavaScript library developed by Facebook for building user interfaces, especially for single-page applications. Unlike other frameworks like Angular or Vue, React focuses only on the view layer and uses a virtual DOM for efficient updates.\par
+\par
+\bullet  Question 2: Explain the core principles of React such as the virtual DOM and component-based architecture.  \par
+Ans => \b0 React uses a virtual DOM to optimize UI updates. Instead of updating the real DOM directly, changes are made in the virtual DOM and compared with the previous state. React also follows a component-based architecture, where the UI is divided into reusable pieces called components.\b\par
+\par
+\bullet  Question 3: What are the advantages of using React.js in web development?  \par
+Ans => \b0 Some advantages include fast rendering with virtual DOM, reusable components, unidirectional data flow, strong community support, and ease of integration with other libraries.\b\par
+\par
+\bullet  JSX (JavaScript XML) ---\par
+\bullet  Question 1: What is JSX in React.js? Why is it used?  \par
+Ans => \b0 JSX is a syntax extension for JavaScript that allows you to write HTML-like code inside JavaScript. It makes it easier to write and visualize the structure of the UI components.\b\par
+\par
+\bullet  Question 2: How is JSX different from regular JavaScript? Can you write JavaScript inside JSX?  \par
+Ans => \b0 JSX allows embedding HTML-like tags, while regular JavaScript does not. Yes, you can write JavaScript inside JSX using curly braces \{\}.\b\par
+\par
+\bullet  Question 3: Discuss the importance of using curly braces \{\} in JSX expressions.  \par
+Ans => \b0 Curly braces in JSX are used to embed JavaScript expressions, such as variables and functions, directly within the JSX code.\b\par
+\par
+\bullet  Components (Functional & Class Components) ---\par
+\bullet  Question 1: What are components in React? Explain the difference between functional components and class components.  \par
+Ans => \b0 Components are the building blocks of a React application. Functional components are simple functions that return JSX, while class components are ES6 classes that extend React.Component and use a render method.\b\par
+\par
+\bullet  Question 2: How do you pass data to a component using props?  \par
+Ans => \b0 Data can be passed to components using attributes in JSX. Inside the component, the data is accessed using `props`.\par
+\b\par
+\bullet  Question 3: What is the role of render() in class components?  \par
+Ans => \b0 The render() method is used in class components to return JSX which defines the component's UI.\par
+\b\par
+\bullet  Props and State ---\par
+\bullet  Question 1: What are props in React.js? How are props different from state?  \par
+Ans => \b0 Props are used to pass data from parent to child components, while state is used to manage local data within a component.\b\par
+\par
+\bullet  Question 2: Explain the concept of state in React and how it is used to manage component data.  \par
+Ans => \b0 State is an object managed within the component that holds dynamic data. It can be updated using setState (class) or useState (function).\b\par
+\par
+\bullet  Question 3: Why is this.setState() used in class components, and how does it work?  \par
+Ans => \b0 `this.setState()` is used to update the component's state and re-render the component. It merges the new state with the current one.\par
+\b\par
+\bullet  Handling Events in React ---\par
+\bullet  Question 1: How are events handled in React compared to vanilla JavaScript? Explain the concept of synthetic events.  \par
+Ans => \b0 React handles events using synthetic events which wrap native events for cross-browser compatibility. Events are named in camelCase (e.g., onClick).\b\par
+\par
+\bullet  Question 2: What are some common event handlers in React.js? Provide examples of onClick, onChange, and onSubmit.  \par
+Ans => \b0 Common event handlers: onClick for clicks, onChange for input fields, onSubmit for form submissions.\b\par
+\b0 Example: `<button onClick=\{handleClick\}>Click</button>`\b\par
+\par
+\bullet  Question 3: Why do you need to bind event handlers in class components?  \par
+Ans => \b0 Event handlers need to be bound in class components to maintain the correct context of `this`.\b\par
+\par
+\bullet  Conditional Rendering ---\par
+\bullet  Question 1: What is conditional rendering in React? How can you conditionally render elements in a React component?  \par
+Ans => \b0 Conditional rendering is the ability to show or hide UI elements based on conditions using JavaScript expressions like if, ternary, and &&.\par
+\b\par
+\bullet  Question 2: Explain how if-else, ternary operators, and && (logical AND) are used in JSX for conditional rendering.  \par
+Ans =>\par
+\b0 - if-else: used outside JSX\par
+- ternary: `\{condition ? 'True' : 'False'\}`\par
+- &&: `\{condition && 'Render if true'\}`\par
+\b\par
+\bullet  Lists and Keys ---\par
+\bullet  Question 1: How do you render a list of items in React? Why is it important to use keys when rendering lists?  \par
+Ans => \b0 Use the `map()` function to render lists. Keys help React identify which items have changed, improving performance.\par
+\b\par
+\bullet  Question 2: What are keys in React, and what happens if you do not provide a unique key?  \par
+Ans => \b0 Keys are unique identifiers for elements in a list. Without unique keys, React may render items incorrectly and reduce performance.\b\par
+\par
+\bullet  Forms in React \par
+\bullet  Question 1: How do you handle forms in React? Explain the concept of controlled components.  \par
+Ans => \b0 Forms are handled by maintaining input values in state and updating them with onChange handlers. Controlled components have their input value controlled by React state.\b\par
+\par
+\bullet  Question 2: What is the difference between controlled and uncontrolled components in React?  \par
+Ans => \b0 Controlled components use state to control input, while uncontrolled components use refs to access DOM values directly.\b\par
+\par
+\bullet  Lifecycle Methods (Class Components) ---\par
+\bullet  Question 1: What are lifecycle methods in React class components? Describe the phases of a component\rquote s lifecycle.  \par
+Ans => \b0 Lifecycle methods manage component behavior during mounting, updating, and unmounting. Phases: Mounting (constructor, componentDidMount), Updating (componentDidUpdate), Unmounting (componentWillUnmount).\b\par
+\par
+\bullet  Question 2: Explain the purpose of componentDidMount(), componentDidUpdate(), and componentWillUnmount().  \par
+Ans =>\par
+\b0 - componentDidMount(): Runs after the component mounts (used for API calls)\par
+- componentDidUpdate(): Runs after component updates\par
+- componentWillUnmount(): Runs before the component is destroyed (used for cleanup)\par
+\b\par
+\bullet  Hooks (useState, useEffect, useReducer, useMemo, useRef, useCallback) ---\par
+\bullet  Question 1: What are React hooks? How do useState() and useEffect() hooks work in functional components?  \par
+Ans => \b0 Hooks allow using state and lifecycle features in functional components. `useState()` initializes state, `useEffect()` runs side-effects like fetching data.\b\par
+\par
+\bullet  Question 2: What problems did hooks solve in React development? Why are hooks considered an important addition to React?  \par
+Ans => \b0 Hooks eliminate the need for class components, simplify logic reuse, and separate concerns better.\par
+\b\par
+\bullet  Question 3: What is useReducer ? How we use in react app?  \par
+Ans => \b0 `useReducer` is a hook for managing complex state. It takes a reducer function and initial state, and returns state and dispatch function.\par
+\b\par
+\bullet  Question 4: What is the purpose of useCallback & useMemo Hooks?  \par
+Ans =>\par
+\b0 - useCallback: Memoizes a function to prevent re-creation on re-renders.\par
+- useMemo: Memoizes a computed value to avoid recalculations.\par
+\b\par
+\bullet  Question 5: What\rquote s the Difference between the useCallback & useMemo Hooks?  \par
+Ans =>\par
+- \b0 useCallback returns a memoized function.\par
+- useMemo returns a memoized value.\par
+\b\par
+\bullet  Question 6 : What is useRef ? How to work in react app?  \par
+Ans \b0 => `useRef` creates a reference to a DOM element or value that persists across renders without causing re-renders.\b\par
+\par
+\bullet  Routing in React (React Router) ---\par
+\bullet  Question 1: What is React Router? How does it handle routing in single-page applications?  \par
+Ans => \b0 React Router is a library for routing in React apps. It enables navigation between components without full page reloads.\b\par
+\par
+\bullet  Question 2: Explain the difference between BrowserRouter, Route, Link, and Switch components in React Router.  \par
+Ans =>\par
+\b0 - BrowserRouter: Wraps the app to enable routing\par
+- Route: Defines path and component to render\par
+- Link: Used to navigate between routes\par
+- Switch: Renders the first matched route\par
+\b\par
+\bullet  React \endash  JSON-server and Firebase Real Time Database ---\par
+\bullet  Question 1: What do you mean by RESTful web services?  \par
+Ans => \b0 RESTful services use HTTP methods (GET, POST, PUT, DELETE) to perform CRUD operations in a stateless, client-server architecture.\par
+\b\par
+\bullet  Question 2: What is Json-Server? How we use in React ?  \par
+Ans => \b0 Json-Server is a fake REST API for testing. Use `npm install json-server` and `fetch()` or `axios()` to consume it in React.\par
+\b\par
+\bullet  Question 3: How do you fetch data from a Json-server API in React? Explain the role of fetch() or  axios() in making API requests.  \par
+Ans \b0 => Use `fetch()` or `axios.get()` in `useEffect()` to retrieve data. These functions make HTTP requests to the JSON-server.\b\par
+\par
+\bullet  Question 4: What is Firebase? What features does Firebase offer?  \par
+Ans => \b0 Firebase is a cloud platform by Google. Features include real-time database, authentication, hosting, cloud functions, and analytics.\b\par
+\par
+\bullet  Question 5: Discuss the importance of handling errors and loading states when working with APIs in React  \par
+Ans => \b0 Proper handling improves UX and debugging. Use states for loading (e.g., `isLoading`) and error (`error`) to show feedback during API calls.\b\par
+\par
+\bullet  Context API ---\par
+\bullet  Question 1: What is the Context API in React? How is it used to manage global state across multiple components?  \par
+Ans => \b0 Context API provides a way to pass data through the component tree without props drilling. It\rquote s used for themes, authentication, and language settings.\b\par
+\par
+\bullet  Question 2: Explain how createContext() and useContext() are used in React for sharing state.  \par
+Ans => `\b0 createContext()` creates the context object, and `useContext()` allows components to consume the shared state.\b\par
+\par
+\bullet  State Management (Redux, Redux-Toolkit or Recoil) ---\par
+\bullet  Question 1: What is Redux, and why is it used in React applications? Explain the core concepts of actions, reducers, and the store.  \par
+Ans => \b0 Redux is a state management tool. Actions describe changes, reducers update state, and the store holds the state tree.\par
+\b\par
+\bullet  Question 2: How does Recoil simplify state management in React compared to Redux?  \par
+Ans => \b0 Recoil is simpler with less boilerplate than Redux. It uses atoms (state) and selectors (derived state), making it easier to manage local and global state.\b\f0\par
+}
+ 

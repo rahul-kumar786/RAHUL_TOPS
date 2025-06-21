@@ -1,145 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>NIVIA Style</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    .product-card img { height: 200px; object-fit: contain; }
+.product-card img { height: 100%; width: 100%; object-fit: ; }
     .product-price { color: red; font-weight: bold; }
     .size-box {
       border: 1px solid #ccc; padding: 0.5rem; width: 40px;
       text-align: center; cursor: pointer; margin: 0.25rem;
     }
-    .size-box:hover { background-color: #f1f1f1; }
-  </style>
-</head>
-<body>
+    
 
-  <!-- Top Offer Bar -->
-  <div class="bg-black text-white text-center py-2">
-    Get 15% Off above ₹2500 or 30% above ₹5000
-  </div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white border-bottom">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="https://www.niviasports.com/cdn/shop/files/Nivia-Logo-Black-SVG_2_1.svg?v=1717751149&width=160" alt="NIVIA" height="70">
-      </a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link fw-bold" href="#">FOOTWEAR</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold" href="#">APPAREL</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold" href="#">FITNESS</a></li>
-        </ul>
-        <div class="d-flex gap-3">
-          <a href="#" class="text-dark"><i class="bi bi-search"></i></a>
-          <a href="#" class="text-dark"><i class="bi bi-person"></i></a>
-          <a href="#" class="text-dark position-relative">
-            <i class="bi bi-bag"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge bg-danger">0</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Banner -->
-  <div class="position-relative">
-    <img src="https://www.niviasports.com/cdn/shop/collections/Footwear_main_Shoes_category-banner.webp?v=1722404461&width=2000"
-         class="w-100" style="max-height:250px; object-fit:cover;" alt="Banner">
-  </div>
+  .hero-section {
+    background-image: url('https://www.niviasports.com/cdn/shop/files/Yoga_1400_X_600.jpg?v=1745394537&width=2000');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
 
-  <!-- Main Content -->
-  <div class="container-fluid my-3">
-    <div class="row">
-      <!-- Sidebar -->
-      <div class="col-lg-3 mb-4">
-        <h5>Category</h5>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-dark">Footwear (71)</a></li>
-          <li><a href="#" class="text-dark">Kids (9)</a></li>
-          <li><a href="#" class="text-dark">Men (91)</a></li>
-        </ul>
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
 
-        <h5>Size</h5>
-        <div class="d-flex flex-wrap">
-          <div class="size-box">1</div>
-          <div class="size-box">2</div>
-          <div class="size-box">3</div>
-          <div class="size-box">4</div>
-          <div class="size-box">5</div>
-          <div class="size-box">6</div>
-          <div class="size-box">7</div>
-          <div class="size-box">8</div>
-          <div class="size-box">9</div>
-          <div class="size-box">10</div>
-          <div class="size-box">11</div>
-          <div class="size-box">12</div>
-          <div class="size-box">13</div>
-        </div>
+  .whatsapp-btn img {
+    width: 50px;
+    height: 50px;
+  }
 
-        <h5 class="mt-3">Price (₹)</h5>
-        <input type="text" class="form-control mb-2" placeholder="₹ Min">
-        <input type="text" class="form-control" placeholder="₹ Max">
-      </div>
+   .new-arrivals-section {
+      background-color: #000;
+      color: #fff;
+      padding: 3rem 2rem;
+    }
 
-      <!-- Products -->
-      <div class="col-lg-9">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <span>Showing 49 - 71 of 71 products</span>
-          <select class="form-select w-auto">
-            <option>Sort by: Manual</option>
-            <option>Price: Low to High</option>
-            <option>Price: High to Low</option>
-          </select>
-        </div>
+    .highlight-new {
+      background-color: red;
+      color: black;
+      font-weight: 700;
+      font-size: 1.4rem;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      margin-bottom: 0.2rem;
+    }
 
-        <div class="row g-4">
-          <!-- Product Card -->
-          <div class="col-sm-6 col-lg-4">
-            <div class="card product-card text-center">
-              <img src="https://www.niviasports.com/cdn/shop/products/RAY-2.0-Aqua-Blue_1.webp?v=1713257616" class="card-img-top">
-              <div class="card-body">
-                <h6 class="card-title mb-1">Ray 2.0</h6>
-                <div class="product-price">₹ 2,999</div>
-              </div>
-            </div>
-          </div>
+    .arrival-title {
+      font-size: 4.5rem;
+      font-weight: 900;
+      line-height: 1;
+      position: relative;
+      display: inline-block;
+    }
 
-          <div class="col-sm-6 col-lg-4">
-            <div class="card product-card text-center">
-              <img src="https://www.niviasports.com/cdn/shop/products/FORCE-FUTSAL-BLUE_1.webp?v=1713257676" class="card-img-top">
-              <div class="card-body">
-                <h6 class="card-title mb-1">Force Futsal</h6>
-                <div class="product-price">₹ 1,515</div>
-              </div>
-            </div>
-          </div>
+    .arrival-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: red;
+    }
 
-          <div class="col-sm-6 col-lg-4">
-            <div class="card product-card text-center">
-              <img src="https://www.niviasports.com/cdn/shop/products/Aviator-3.0-Turf-Violet-Gold_1.webp?v=1713257583" class="card-img-top">
-              <div class="card-body">
-                <h6 class="card-title mb-1">Aviator 3.0 Turf</h6>
-                <div class="product-price">₹ 1,099</div>
-              </div>
-            </div>
-          </div>
-        </div>
+    .btn-explore {
+      margin-top: 1rem;
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      border: none;
+      padding: 0.4rem 1rem;
+      font-size: 1rem;
+    }
 
-        <div class="text-center mt-4">
-          <button class="btn btn-dark">LOAD PREVIOUS PAGE</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    .scroll-cards {
+      overflow-x: auto;
+      white-space: nowrap;
+      gap: 1rem;
+      display: flex;
+      scroll-snap-type: x mandatory;
+    }
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    .scroll-cards::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scroll-cards img {
+      height: 220px;
+      border-radius: 0;
+      flex: 0 0 auto;
+      scroll-snap-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .arrival-title {
+        font-size: 2.8rem;
+      }
+
+      .highlight-new {
+        font-size: 1.1rem;
+      }
+
+      .scroll-cards img {
+        height: 300px;
+      }
+    }
+
+    
+     .logo-img {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+
+    .video-card {
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .video-card video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .video-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      color: #fff;
+    }
+    .video-info small {
+      font-size: 0.8rem;
+      text-decoration: line-through;
+      color: #ccc;
+    }
+  

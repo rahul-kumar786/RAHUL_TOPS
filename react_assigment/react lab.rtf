@@ -1,0 +1,272 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.26100}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs28\lang9 ------------------- Module 7 \f1\endash  Mernstack \endash  React JS\f0\lang1033  -----------------------\f1\lang9  \par
+\f0\lang1033            ------------------------Lab\f1\lang9  EXERCISE\f0\lang1033  --------------------------\f1\lang9  \par
+
+\pard\sl276\slmult1\fs24\bullet  Task: \par
+\bullet  Set up a new React.js project using create-react-app.\par
+\bullet  Create a basic component that displays "Hello, React!" on the web page. \par
+\f0\lang1033 Ans => \b0  1. Create React App\par
+Command: npx create-react-app my-app\par
+ Inside App.js:\par
+\par
+function App() \{\par
+  return <h1>Hello, React!</h1>;\par
+\}\par
+export default App;\f1\lang9\par
+\b\par
+\fs28\bullet  JSX (JavaScript XML) \f0\lang1033 ----\par
+\f1\fs24\bullet  Task: \par
+\bullet  Create a React component that renders the following JSX elements: \par
+\bullet  A heading with the text "Welcome to JSX". \par
+\bullet  A paragraph explaining JSX with dynamic data (use curly braces to insert variables). \par
+\f0 Ans => \b0 const JSXIntro = () => \{\par
+  const description = "JSX allows us to write HTML in React";\par
+  return (\par
+    <div>\par
+      <h1>Welcome to JSX</h1>\par
+      <p>\{description\}</p>\par
+    </div>\par
+  );\par
+\};\b\fs28\lang9\par
+
+\pard\sa200\sl276\slmult1\b0\fs22\par
+
+\pard\sl276\slmult1\b\f1\fs28\bullet  Components (Functional & Class Components) \f0\lang1033 ----\fs22\par
+\f1\bullet  Task 1: \par
+\bullet  Create a functional component Greeting that accepts a name as a prop and displays "Hello, [name]!". \par
+\f0 Ans => \b0 const Greeting = (\{ name \}) => <h1>Hello, \{name\}!</h1>;\f1\par
+\b\bullet  Task 2: \par
+\bullet  Create a class component WelcomeMessage that displays "Welcome to React!" and a render() method. \par
+\f0 Ans => \b0 import React, \{ Component \} from 'react';\par
+class WelcomeMessage extends Component \{\par
+  render() \{\par
+    return <h1>Welcome to React!</h1>;\par
+  \}\par
+\}\b\f1\par
+\par
+\f0\fs28\lang9\bullet  Props and State \lang1033 ----\par
+\f1\fs24\lang9\bullet  Task 1: \par
+\bullet  Create a React component UserCard that accepts name, age, and location as props and displays them in a card format. \par
+\f0\lang1033 Ans =>\b0 const UserCard = (\{ name, age, location \}) => (\par
+  <div>\par
+    <h2>\{name\}</h2>\par
+    <p>Age: \{age\}</p>\par
+    <p>Location: \{location\}</p>\par
+  </div>\par
+);\b\f1\par
+\lang9\par
+\bullet  Task 2: \par
+\bullet  Create a Counter component with a button that increments a count value using React state. Display the current count on the screen. \par
+\f0\lang1033 Ans => \b0 import \{ useState \} from 'react';\par
+const Counter = () => \{\par
+  const [count, setCount] = useState(0);\par
+  return (\par
+    <div>\par
+      <p>Count: \{count\}</p>\par
+      <button onClick=\{() => setCount(count + 1)\}>Increment</button>\par
+    </div>\par
+  );\par
+\};\f1\par
+\b\lang9\par
+\par
+\fs28\bullet  Handling Events in React \f0\lang1033 ----\par
+\f1\fs24\bullet  Task 1: \par
+\bullet  Create a button in a React component that, when clicked, changes the text from "Not Clicked" to "Clicked!" using event handling. \par
+\f0 Ans =>\b0 const ClickButton = () => \{\par
+  const [text, setText] = useState("Not Clicked");\par
+  return <button onClick=\{() => setText("Clicked!")\}>\{text\}</button>;\par
+\};\b\f1\lang9\par
+\lang1033\bullet  Task 2: \par
+\bullet  Create a form with an input field in React. Display the value of the input f ield dynamically as the user types in it. \par
+\f0 Ans =>\b0 const InputForm = () => \{\par
+  const [value, setValue] = useState("");\par
+  return <input value=\{value\} onChange=\{(e) => setValue(e.target.value)\} />;\par
+\};\b\f1\lang9\par
+\lang1033\par
+\fs28\bullet  Conditional Rendering \f0 ----\par
+\f1\fs24\lang9\bullet  Task 1: \par
+\bullet  Create a component that conditionally displays a login or logout button based on the user\rquote s login status. \par
+\f0\lang1033 Ans =>\b0 const LoginControl = (\{ isLoggedIn \}) => (\par
+  <button>\{isLoggedIn ? "Logout" : "Login"\}</button>\par
+);\b\f1\lang9\par
+\bullet  Task 2: \par
+\bullet   Implement a component that displays a message like "You are eligible to vote" if the user is over 18, otherwise display "You are not eligible to vote." \par
+\f0\lang1033 Ans =>\b0 const VoteCheck = (\{ age \}) => (\par
+  <p>\{age >= 18 ? "You are eligible to vote" : "You are not eligible to vote"\}</p>\par
+);\b\f1\lang9\par
+\fs28\par
+\bullet  Lists and Keys\f0\lang1033  ----\par
+\f1\fs24\lang9\bullet  Task 1: \par
+\bullet  Create a React component that renders a list of items (e.g., a list of fruit names). Use the map() function to render each item in the list.\par
+\f0\lang1033 Ans =>\f1\lang9  \b0 const FruitList = (\{ fruits \}) => (\par
+  <ul>\par
+    \{fruits.map((fruit, index) => <li key=\{index\}>\{fruit\}</li>)\}\par
+  </ul>\par
+);\b\par
+\bullet  Task 2: \par
+\bullet  Create a list of users where each user has a unique id. Render the user list using React and assign a unique key to each user.\par
+\f0\lang1033 Ans =>\f1\lang9  \b0 const UserList = (\{ users \}) => (\par
+  <ul>\par
+    \{users.map(user => <li key=\{user.id\}>\{user.name\}</li>)\}\par
+  </ul>\par
+);\b\par
+\fs28\par
+\bullet  Forms in React \f0\fs32\lang1033 ----\par
+\f1\fs24\bullet  Task 1: \par
+\bullet  Create a form with inputs for name, email, and password. Use state to control the form and display the form data when the user submits it.\par
+\bullet  Task 2: \par
+\bullet  Add validation to the form created above. For example, ensure that the email input contains a valid email address. \par
+\f0 Ans =>\par
+\b0 const BasicForm = () => \{\par
+  const [form, setForm] = useState(\{ name: '', email: '', password: '' \});\par
+  const handleChange = (e) => setForm(\{ ...form, [e.target.name]: e.target.value \});\par
+  const handleSubmit = (e) => \{\par
+    e.preventDefault();\par
+    alert(JSON.stringify(form));\par
+  \};\par
+  return (\par
+    <form onSubmit=\{handleSubmit\}>\par
+      <input name="name" onChange=\{handleChange\} />\par
+      <input name="email" onChange=\{handleChange\} />\par
+      <input name="password" onChange=\{handleChange\} type="password" />\par
+      <button type="submit">Submit</button>\par
+    </form>\par
+  );\par
+\};\f1\par
+\b\par
+\fs28\bullet  Lifecycle Methods (Class Components) \f0 ----\par
+\f1\fs24\lang9\bullet  Task 1: \par
+\bullet  Create a class component that fetches data from an API when the component mounts using componentDidMount(). Display the data in the component. \par
+\f0\lang1033 Ans =>\b0 class APIFetcher extends Component \{\par
+  state = \{ data: [] \};\par
+  componentDidMount() \{\par
+    fetch('https://jsonplaceholder.typicode.com/users')\par
+      .then(res => res.json())\par
+      .then(data => this.setState(\{ data \}));\par
+  \}\par
+  render() \{\par
+    return <pre>\{JSON.stringify(this.state.data, null, 2)\}</pre>;\par
+  \}\par
+\}\b\f1\lang9\par
+\bullet  Task 2: \par
+\bullet  Implement a component that logs a message to the console when it updates using componentDidUpdate(). Log another message when the component unmounts using componentWillUnmount().\par
+\f0\lang1033 Ans =>\b0  class LifecycleLogger extends Component \{\par
+  componentDidUpdate() \{ console.log("Component Updated"); \}\par
+  componentWillUnmount() \{ console.log("Component Will Unmount"); \}\par
+  render() \{ return <div>Watch the console</div>; \}\par
+\}\f1\lang9  \par
+\b\par
+\fs28\bullet  Hooks (useState, useEffect, useReducer, useMemo, useRef, useCallback) \f0\lang1033 ----\par
+\f1\fs24\bullet  Task 1: \par
+\bullet  Create a functional component with a counter using the useState() hook. Include buttons to increment and decrement the counter. \par
+\f0 Ans =>\b0 const HookCounter = () => \{\par
+  const [count, setCount] = useState(0);\par
+  return (\par
+    <>\par
+      <button onClick=\{() => setCount(count + 1)\}>+</button>\par
+      <p>\{count\}</p>\par
+    </>\par
+  );\par
+\};\b\f1\par
+\bullet  Task 2: \par
+\bullet  Use the useEffect() hook to fetch and display data from an API when the component mounts. \par
+\f0 Ans =>\b0 const FetchWithEffect = () => \{\par
+  const [data, setData] = useState([]);\par
+  useEffect(() => \{\par
+    fetch('https://jsonplaceholder.typicode.com/users')\par
+      .then(res => res.json())\par
+      .then(setData);\par
+  \}, []);\par
+  return <pre>\{JSON.stringify(data, null, 2)\}</pre>;\par
+\};\b\f1\par
+\bullet  Task 3: \par
+\bullet  Create react app with use of useSelector & useDispatch.  \par
+\bullet  Task 4: \par
+\bullet  Create react app to avoid re-renders in react application by useRef  ? \par
+\f0 Ans =>\b0 const AvoidReRender = () => \{\par
+  const countRef = useRef(0);\par
+  const update = () => countRef.current++;\par
+  return <button onClick=\{update\}>Clicked \{countRef.current\} times</button>;\par
+\};\b\f1\par
+\par
+\fs28\bullet  Routing in React (React Router) \f0 ----\par
+\f1\fs24\bullet  Task 1: \par
+\bullet  Set up a basic React Router with two routes: one for a Home page and one for an About page. Display the appropriate content based on the URL. \par
+\par
+\bullet  Task 2: \par
+\bullet  Create a navigation bar using React Router\rquote s Link component that allows users to switch between the Home, About, and Contact pages.\par
+\f0 Ans =>\b0  In App.js:\par
+import \{ BrowserRouter as Router, Routes, Route, Link \} from 'react-router-dom';\par
+const Home = () => <h2>Home Page</h2>;\par
+const About = () => <h2>About Page</h2>;\par
+const Contact = () => <h2>Contact Page</h2>;\par
+\par
+function AppRouter() \{\par
+  return (\par
+    <Router>\par
+      <nav>\par
+        <Link to="/">Home</Link>\par
+        <Link to="/about">About</Link>\par
+        <Link to="/contact">Contact</Link>\par
+      </nav>\par
+      <Routes>\par
+        <Route path="/" element=\{<Home />\} />\par
+        <Route path="/about" element=\{<About />\} />\par
+        <Route path="/contact" element=\{<Contact />\} />\par
+      </Routes>\par
+    </Router>\par
+  );\par
+\}\b\f1\par
+  \par
+\par
+\fs28\bullet  React \endash  JSON-server and Firebase Real Time Database \f0 ----\par
+\f1\fs24\bullet  Task 1: \par
+\bullet  Create a React component that fetches data from a public API (e.g., a list of users) and displays it in a table format. \par
+\bullet  Create a React app with Json-server and use Get , Post , Put , Delete & patch method on  Json-server API.  \par
+\bullet  Task 2: \par
+\bullet  Create a React app crud and Authentication with firebase API.  \par
+\bullet  Implement google Authentication with firebase API. \par
+\bullet  Task 3: \par
+\bullet  Implement error handling and loading states for the API call. Display a loading spinner while the data is being fetched. \par
+\f0 Ans => \b0 JSON-server + Firebase\par
+ Use json-server: json-server --watch db.json\par
+ For Firebase: use firebase.initializeApp() + firestore/firebasedatabase\f1\par
+\b\par
+\fs28\bullet  Context API \f0 ----\par
+\f1\fs24\bullet  Task 1: \par
+\bullet  Create a simple theme toggle (light/dark mode) using the Context API. The theme state should be shared across multiple components.\par
+\f0 Ans => \b0 const ThemeContext = React.createContext();\par
+const ThemeToggle = () => \{\par
+  const \{ theme, toggleTheme \} = useContext(ThemeContext);\par
+  return <button onClick=\{toggleTheme\}>\{theme\}</button>;\par
+\};\b\f1  \par
+\bullet  Task 2: \par
+\bullet  Use the Context API to create a global user authentication system. If the user is logged in, display a welcome message; otherwise, prompt them to log in. \par
+\f0 Ans => \b0 const AuthContext = React.createContext();\par
+const AuthStatus = () => \{\par
+  const \{ user \} = useContext(AuthContext);\par
+  return <p>\{user ? `Welcome, $\{user\}` : "Please log in"\}</p>;\par
+\};\b\f1\par
+\par
+\fs28\bullet  State Management (Redux, Redux-Toolkit or Recoil) \f0 ----\par
+\f1\fs24\bullet  Task 1: \par
+\bullet  Create a simple counter application using Redux for state management. Implement actions to increment and decrement the counter.\par
+\f0 Ans =>\b0  Redux counter:\par
+ actions: increment, decrement\par
+ reducers: counterReducer\par
+ use useSelector and useDispatch in component\b\f1  \par
+\par
+\bullet  Task 2: \par
+\bullet  Build a todo list application using Recoil for state management. Allow users to add, remove, and mark tasks as complete. \par
+\f0 Ans =>\b0  Recoil Todo:\par
+ atom, selector, useRecoilState\b\f1\par
+\bullet  Task 3: \par
+\bullet  Build a crud application using Redux-Toolkit for state management. Allow users to add, remove, delete and update.\par
+\f0 Ans =>\b0  Redux-Toolkit CRUD:\par
+ createSlice, createAsyncThunk, configureStore\par
+ dispatch(addTodo, updateTodo, removeTodo, etc.)\fs20\lang9\par
+
+\pard\sa200\sl276\slmult1\fs22\par
+}
+ 
